@@ -88,13 +88,13 @@ public class PlayerControl : MonoBehaviour {
 	}
 
     IEnumerator JumpTimer() {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.7f);
         jump = false;
     }
 
     IEnumerator ResumeScroll(bool jump, bool falling) {
         if (jump) {
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.13f);
             GameManager.instance.isGrounded = false;
         }
         if (falling) {

@@ -235,10 +235,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 453369016}
   - 114: {fileID: 453369015}
-  - 212: {fileID: 453369014}
-  - 95: {fileID: 453369013}
   - 50: {fileID: 453369017}
   - 61: {fileID: 453369018}
+  - 212: {fileID: 453369014}
+  - 95: {fileID: 453369013}
   m_Layer: 9
   m_Name: Player
   m_TagString: Untagged
@@ -255,7 +255,7 @@ Animator:
   m_GameObject: {fileID: 453369012}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b919afb937f235343b4db93926f840a1, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6f1edb4e01905644daf34199a834b34a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -288,7 +288,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -816023739
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -325,7 +325,7 @@ Transform:
   m_GameObject: {fileID: 453369012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 1824333352}
   - {fileID: 612016121}
@@ -347,7 +347,7 @@ Rigidbody2D:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!61 &453369018
 BoxCollider2D:
@@ -360,9 +360,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.02}
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.4}
+  m_Size: {x: 0.25, y: 0.32}
 --- !u!1 &612016120
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,7 +385,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 612016120}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.25, z: 0}
+  m_LocalPosition: {x: 0, y: -0.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 453369016}
@@ -532,7 +532,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.27205884, g: 0.27205884, b: 0.27205884, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!4 &948054460
@@ -609,7 +609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: 0
-  bullet: {fileID: 5006706, guid: 188f309b702fa3341b5c3d05a8d9b509, type: 2}
+  bullet: {fileID: 5045358, guid: 39ec836d3cab759418272a6d8417593a, type: 2}
   speed: 10
   fireRate: 0.25
 --- !u!1 &2038228032
