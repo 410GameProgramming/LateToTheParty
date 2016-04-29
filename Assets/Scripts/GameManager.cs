@@ -29,11 +29,9 @@ public class GameManager : MonoBehaviour {
         initGame();
 	}
 
-    void initGame()
-    {
+    void initGame() {
         isGrounded = false;
-        scrollSpeed = 4.0f;
+        scrollSpeed = 5.0f;
         //initialize all the variables here
     }
-	
 }

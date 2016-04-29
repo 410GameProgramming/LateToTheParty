@@ -14,8 +14,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Ground
+  - Player
   - 
   - 
   - 
@@ -51,6 +51,6 @@ TagManager:
   - name: wall
     uniqueID: 1691111181
     locked: 0
-  - name: UI
-    uniqueID: 4021060829
+  - name: player
+    uniqueID: 3478943557
     locked: 0

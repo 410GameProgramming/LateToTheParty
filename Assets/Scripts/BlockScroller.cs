@@ -9,7 +9,6 @@ public class BlockScroller : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        print(coll.gameObject.tag);
         if (coll.gameObject.tag == "Player")
         {
             GameManager.instance.isGrounded = true;
@@ -18,6 +17,8 @@ public class BlockScroller : MonoBehaviour {
     }
 	// Update is called once per frame
 	void Update () {
-        transform.transform.Translate(new Vector3(0, 1, 0) * GameManager.instance.scrollSpeed * Time.deltaTime);
+        if (!GameManager.instance.isGrounded) {
+            transform.transform.Translate(new Vector3(0, 1, 0) * GameManager.instance.scrollSpeed * Time.deltaTime);
+        }
 	}
 }
