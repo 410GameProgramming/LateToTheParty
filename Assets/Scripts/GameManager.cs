@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour {
     [HideInInspector]
     public bool isGrounded;
     public float scrollSpeed;
+    public int totalScore;
 	void Awake () {
         //Check if instance already exists
         if (instance == null){
@@ -31,7 +32,8 @@ public class GameManager : MonoBehaviour {
 
     void initGame() {
         isGrounded = false;
-        scrollSpeed = 5.0f;
+        scrollSpeed = 2.0f;
+        totalScore = 0;
         //initialize all the variables here
     }
 }

@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - solid block
+  - Attack
+  - Obstacle
   - Projectile
   layers:
   - Default
@@ -52,6 +54,12 @@ TagManager:
   - name: wall
     uniqueID: 1691111181
     locked: 0
+  - name: explosion
+    uniqueID: 951602575
+    locked: 0
   - name: player
     uniqueID: 3478943557
+    locked: 0
+  - name: UI Components
+    uniqueID: 1617973899
     locked: 0

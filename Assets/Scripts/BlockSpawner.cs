@@ -24,7 +24,7 @@ public class BlockSpawner : MonoBehaviour {
         timer -= Time.deltaTime;
         if (timer <= 0 && !GameManager.instance.isGrounded){
             Vector3 blockPosition = new Vector3(Random.Range(-maxPos, maxPos), transform.position.y, transform.position.z);
-            patternNumber = Random.Range(0, 2);
+            patternNumber = Random.Range(0, 4);
             Instantiate(blocks[patternNumber], blockPosition, transform.rotation);
             timer = delayTimer;
         }
