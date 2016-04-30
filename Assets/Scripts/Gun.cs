@@ -11,13 +11,16 @@ public class Gun : MonoBehaviour {
     public Rigidbody2D bullet;
     public float speed = 200f;				// Base projectile speed.
     public float fireRate;
+    public AudioClip hitSound;
 
-	private PlayerControl playerCtrl;		// Reference to the PlayerControl script.
+    private PlayerControl playerCtrl;		// Reference to the PlayerControl script.
 	private Animator anim;					// Reference to the Animator component.
     private float nextFire;
+    private AudioSource source;
 
-	void Awake() {
-		anim = transform.root.gameObject.GetComponent<Animator>();
+    void Awake() {
+        source = gameObject.GetComponent<AudioSource>();
+        anim = transform.root.gameObject.GetComponent<Animator>();
 		playerCtrl = transform.root.GetComponent<PlayerControl>();
 	}
 
@@ -25,6 +28,7 @@ public class Gun : MonoBehaviour {
         Rigidbody2D bulletInstance;
         if (Input.GetButton("Fire1") && playerCtrl.ammo != 0 && Time.time > nextFire && (playerCtrl.falling == true || playerCtrl.jump == true)) {
             nextFire = Time.time + fireRate;
+            source.PlayOneShot(hitSound);
             switch (weapon) {
                 case 0:
                     bulletInstance = Instantiate(bullet, transform.position, Quaternion.Euler(new Vector3(0, 0, 0))) as Rigidbody2D;

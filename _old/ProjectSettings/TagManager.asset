@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - solid block
+  - Attack
+  - Obstacle
+  - Projectile
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Ground
+  - Player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: background
+    uniqueID: 2244402587
+    locked: 0
+  - name: solid blocks
+    uniqueID: 1575497323
+    locked: 0
+  - name: wall
+    uniqueID: 1691111181
+    locked: 0
+  - name: explosion
+    uniqueID: 951602575
+    locked: 0
+  - name: player
+    uniqueID: 3478943557
+    locked: 0
+  - name: UI Components
+    uniqueID: 1617973899
+    locked: 0
