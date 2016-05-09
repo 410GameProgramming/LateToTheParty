@@ -45,16 +45,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\scripts\BlockSpawner.cs" />
-     <Compile Include="Assets\scripts\CameraFollow.cs" />
-     <Compile Include="Assets\scripts\DestroyByCameraDistance.cs" />
-     <Compile Include="Assets\scripts\DiveIn.cs" />
-     <Compile Include="Assets\scripts\GameLoader.cs" />
-     <Compile Include="Assets\scripts\GameManager.cs" />
-     <Compile Include="Assets\scripts\GroundCheck.cs" />
-     <Compile Include="Assets\scripts\PlayerController.cs" />
-     <Compile Include="Assets\scripts\ScrollWithCamera.cs" />
-     <Compile Include="Assets\scripts\WallScroller.cs" />
+     <Compile Include="Assets\scripts\enemy\EdgeDetect.cs" />
+     <Compile Include="Assets\scripts\enemy\Enemy.cs" />
+     <Compile Include="Assets\scripts\enemy\Turret.cs" />
+     <Compile Include="Assets\scripts\enemy\TurretFire.cs" />
+     <Compile Include="Assets\scripts\enemy\TurretProjectile.cs" />
+     <Compile Include="Assets\scripts\enemy\WokkyTopDetection.cs" />
+     <Compile Include="Assets\scripts\player\PlayerController.cs" />
+     <Compile Include="Assets\scripts\scrollers\CameraFollow.cs" />
+     <Compile Include="Assets\scripts\scrollers\ScrollWithCamera.cs" />
+     <Compile Include="Assets\scripts\scrollers\WallScroller.cs" />
+     <Compile Include="Assets\scripts\singletons\GameLoader.cs" />
+     <Compile Include="Assets\scripts\singletons\GameManager.cs" />
+     <Compile Include="Assets\scripts\utils\BlockSpawner.cs" />
+     <Compile Include="Assets\scripts\utils\DestroyByCameraDistance.cs" />
+     <Compile Include="Assets\scripts\utils\DiveIn.cs" />
+     <Compile Include="Assets\scripts\utils\GroundCheck.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

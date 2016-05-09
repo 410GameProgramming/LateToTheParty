@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21290332}
   - 114: {fileID: 11440146}
   m_Layer: 0
-  m_Name: ground
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 117382}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbf97a48150314b4dbf8a73fe9e9a5f0, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a52e1a0c1db6144d8ce87c13f9af834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &21290332
