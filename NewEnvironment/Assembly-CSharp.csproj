@@ -51,7 +51,10 @@
      <Compile Include="Assets\scripts\enemy\TurretFire.cs" />
      <Compile Include="Assets\scripts\enemy\TurretProjectile.cs" />
      <Compile Include="Assets\scripts\enemy\WokkyTopDetection.cs" />
+     <Compile Include="Assets\scripts\mover\MoveBlade.cs" />
+     <Compile Include="Assets\scripts\mover\MoveBlock.cs" />
      <Compile Include="Assets\scripts\player\PlayerController.cs" />
+     <Compile Include="Assets\scripts\rotator\RotateBlade.cs" />
      <Compile Include="Assets\scripts\scrollers\CameraFollow.cs" />
      <Compile Include="Assets\scripts\scrollers\ScrollWithCamera.cs" />
      <Compile Include="Assets\scripts\scrollers\WallScroller.cs" />

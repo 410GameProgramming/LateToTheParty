@@ -1,0 +1,19 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class MoveBlock : MonoBehaviour {
+
+    public int index;
+    private Vector3 pos1;
+    private Vector3 pos2;
+
+	void Start () {
+	    pos1 = new Vector3(GameManager.instance.blockPositions[index].x, transform.position.y, 0f);
+        pos2 = new Vector3(GameManager.instance.blockPositions[index].y, transform.position.y, 0f);
+	}
+	
+	// Update is called once per frame
+	void Update () {
+        transform.position = Vector3.Lerp(pos1, pos2, (Mathf.Sin(GameManager.instance.blockSpeed * Time.time) + 1.0f) / 2.0f);
+	}
+}

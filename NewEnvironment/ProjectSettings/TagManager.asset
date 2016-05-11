@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Wall
+  - solid block
+  - Attack
+  - Obstacle
   layers:
   - Default
   - TransparentFX
@@ -42,11 +45,14 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Blocks
-    uniqueID: 525611591
-    locked: 0
   - name: Walls
     uniqueID: 4207193231
+    locked: 0
+  - name: hazzards
+    uniqueID: 4042772983
+    locked: 0
+  - name: Blocks
+    uniqueID: 525611591
     locked: 0
   - name: Player
     uniqueID: 3878694589
