@@ -11,7 +11,6 @@ public class MoveBlade : MonoBehaviour {
     public bool alongX = true;
     public bool alongY = false;
 
-
 	void Start () {
         if (alongX){
             pos1 = new Vector3(minVal, transform.position.y, 0f);

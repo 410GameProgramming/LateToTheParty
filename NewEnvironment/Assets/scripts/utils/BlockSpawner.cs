@@ -31,7 +31,7 @@ public class BlockSpawner : MonoBehaviour {
         if (timer <= 0 && !GameManager.instance.isGrounded && rb2d.velocity.y<-7){
             //get a random pattern
             patternNumber = Random.Range(0, blocks.Length);
-
+            print(patternNumber + "-" + GameManager.instance.blockPositions.Length);
             float newX = Random.Range(GameManager.instance.blockPositions[patternNumber].x, 
                                       GameManager.instance.blockPositions[patternNumber].y);
             Vector3 blockPosition = new Vector3(newX, transform.position.y, transform.position.z);

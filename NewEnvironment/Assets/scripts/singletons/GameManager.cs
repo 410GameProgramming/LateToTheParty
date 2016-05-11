@@ -13,13 +13,22 @@ public class GameManager : MonoBehaviour {
     public float blockSpeed;
     public int playerHealth;
     public Vector2[] blockPositions = {
-        new Vector2(-2.88f, 2.88f),
-        new Vector2(-2.88f, 2.88f),
-        new Vector2(-3.4f, 3.4f),
-        new Vector2(-2.3f, 2.3f),
-        new Vector2(-3f, 3f),
-        new Vector2(-3f, 3f)
-    };
+        new Vector2(-2.88f, 2.88f), //p1
+        new Vector2(-2.88f, 2.88f), //p1
+        new Vector2(-2.88f, 2.88f), //p1
+        new Vector2(-3.4f, 3.4f), //p2
+        new Vector2(-3.4f, 3.4f), //p2
+        new Vector2(-3.4f, 3.4f), //p2
+        new Vector2(-2.3f, 2.3f), //p3
+        new Vector2(-2.3f, 2.3f), //p3
+        new Vector2(-2.3f, 2.3f), //p3
+        new Vector2(-2.88f, 2.88f), //p1
+        new Vector2(-2.88f, 2.88f), //p1
+        new Vector2(-2.88f, 2.88f), //p1
+        new Vector2(-2.3f, 2.3f), //p3
+        new Vector2(-2.3f, 2.3f), //p3
+        new Vector2(-2.3f, 2.3f) //p3
+     };
     
 	void Awake () {
         //Check if instance already exists
