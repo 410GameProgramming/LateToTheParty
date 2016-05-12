@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour {
     public int totalScore;
     public float blockSpeed;
     public int playerHealth;
+    public GameObject player;
     public Vector2[] blockPositions = {
         new Vector2(-2.88f, 2.88f), //p1
         new Vector2(-2.88f, 2.88f), //p1
@@ -27,8 +28,10 @@ public class GameManager : MonoBehaviour {
         new Vector2(-2.88f, 2.88f), //p1
         new Vector2(-2.3f, 2.3f), //p3
         new Vector2(-2.3f, 2.3f), //p3
-        new Vector2(-2.3f, 2.3f) //p3
-     };
+        new Vector2(-2.3f, 2.3f), //p3
+        new Vector2(-2.88f, 2.88f), //block with wokky
+        new Vector2(-2.88f, 2.88f) //floaty
+        };
     
 	void Awake () {
         //Check if instance already exists
@@ -54,6 +57,7 @@ public class GameManager : MonoBehaviour {
         totalScore = 0;
         playerHealth = 100;
         blockSpeed = 1.5f;
+        player = GameObject.FindGameObjectWithTag("Player");
         //initialize all the variables here
     }
 }

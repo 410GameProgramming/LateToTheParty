@@ -83,7 +83,7 @@ Transform:
   m_GameObject: {fileID: 130706}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.06, y: -1.19, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 402342}
   - {fileID: 458306}
@@ -166,7 +166,6 @@ MonoBehaviour:
   projectileSpeed: 5
   projectileTimer: 5
   projectile: {fileID: 152966, guid: 714cf57749c1bc24aa12324a2befdc6e, type: 2}
-  target: {fileID: 0}
   projectileSpawn: {fileID: 458306}
 --- !u!212 &21279846
 SpriteRenderer:

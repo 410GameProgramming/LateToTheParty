@@ -137,7 +137,7 @@ Transform:
   m_GameObject: {fileID: 106382}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.354, y: 0.315, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 401364}
   - {fileID: 484996}
@@ -358,7 +358,6 @@ MonoBehaviour:
   dist: 0
   burstSize: 9
   projectile: {fileID: 152966, guid: 714cf57749c1bc24aa12324a2befdc6e, type: 2}
-  target: {fileID: 0}
   projectileSpawn: {fileID: 462656}
 --- !u!114 &11454898
 MonoBehaviour:

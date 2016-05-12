@@ -15,14 +15,14 @@ public class Floaty : MonoBehaviour {
     public float projectileTimer;
 
     public GameObject projectile;
-    public Transform target;
+    private Transform target;
     public Transform projectileSpawn;
 
     private bool alternate = true;
 
     // Use this for initialization
     void Start () {
-	
+        target = GameManager.instance.player.transform;
 	}
 	
 	// Update is called once per frame

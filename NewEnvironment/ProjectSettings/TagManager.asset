@@ -8,6 +8,7 @@ TagManager:
   - solid block
   - Attack
   - Obstacle
+  - Ground
   layers:
   - Default
   - TransparentFX

@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour {
     public int burstSize;
 
     public GameObject projectile;
-    public Transform target;
+    private Transform target;
     public Transform projectileSpawn;
 
   
@@ -36,7 +36,8 @@ public class Enemy : MonoBehaviour {
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();      
         scoreText = GameObject.Find("scoreText").GetComponent<Text>();
-        
+        target = GameManager.instance.player.transform;
+
     }
 	
     void Update()

@@ -125,7 +125,7 @@ GameObject:
   - 4: {fileID: 478338}
   m_Layer: 0
   m_Name: BlockWithWokky
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -682,7 +682,6 @@ MonoBehaviour:
   dist: 0
   burstSize: 9
   projectile: {fileID: 152966, guid: 714cf57749c1bc24aa12324a2befdc6e, type: 2}
-  target: {fileID: 0}
   projectileSpawn: {fileID: 419114}
 --- !u!212 &21238334
 SpriteRenderer:
