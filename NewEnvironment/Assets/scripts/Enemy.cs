@@ -35,7 +35,7 @@ public class Enemy : MonoBehaviour {
         source = gameObject.GetComponent<AudioSource>();
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();      
-        scoreText = GameObject.Find("scoreText").GetComponent<Text>();
+        //scoreText = GameObject.Find("scoreText").GetComponent<Text>();
         target = GameManager.instance.player.transform;
 
     }
@@ -79,12 +79,12 @@ public class Enemy : MonoBehaviour {
         Instantiate(deathFX, transform.position, transform.rotation);        
         Destroy(gameObject);
         GameManager.instance.totalScore += 5;
-        displayScore();
+        //displayScore();
     }
-
+    /*
     private void displayScore(){
         scoreText.text = "Score: " + GameManager.instance.totalScore;
-    }
+    }*/
     public void Flip()
     {
         speed = -speed;

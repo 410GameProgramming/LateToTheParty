@@ -678,7 +678,7 @@ MonoBehaviour:
   fireFrequency: 2
   projectileSpeed: 10
   projectileTimer: 5
-  rad: 3
+  rad: 20
   dist: 0
   burstSize: 9
   projectile: {fileID: 152966, guid: 714cf57749c1bc24aa12324a2befdc6e, type: 2}

@@ -123,9 +123,9 @@ MonoBehaviour:
   - {fileID: 171762, guid: dab490a0c5c023f4eaff88400888bb06, type: 2}
   - {fileID: 198854, guid: 80930e24e34dd4c4eb16bf2bd7bf2658, type: 2}
   - {fileID: 169572, guid: a487744cf51639449a2cf3aff65e5dca, type: 2}
-  - {fileID: 130706, guid: ecc4c84767d72594e8e9c8e8035d4ae6, type: 2}
-  - {fileID: 130706, guid: ecc4c84767d72594e8e9c8e8035d4ae6, type: 2}
-  - {fileID: 130706, guid: ecc4c84767d72594e8e9c8e8035d4ae6, type: 2}
+  - {fileID: 130964, guid: 30bfe73c48b4152438bfbbb3f37aa21e, type: 2}
+  - {fileID: 150284, guid: 552119b2a88180849985bc7d4377e5b2, type: 2}
+  - {fileID: 130964, guid: 30bfe73c48b4152438bfbbb3f37aa21e, type: 2}
   - {fileID: 171762, guid: dab490a0c5c023f4eaff88400888bb06, type: 2}
   - {fileID: 171762, guid: dab490a0c5c023f4eaff88400888bb06, type: 2}
   - {fileID: 171762, guid: dab490a0c5c023f4eaff88400888bb06, type: 2}
@@ -331,7 +331,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16c9fc44fdbf36e47ba4693382d40205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   wall: {fileID: 0}
   tileSizeZ: 1
 --- !u!61 &978872743
@@ -680,7 +679,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16c9fc44fdbf36e47ba4693382d40205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   wall: {fileID: 0}
   tileSizeZ: 1
 --- !u!4 &1721087829
@@ -1071,7 +1069,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3
+  orthographic size: 6.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

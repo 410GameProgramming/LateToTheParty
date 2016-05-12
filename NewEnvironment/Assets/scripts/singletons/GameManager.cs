@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour {
         new Vector2(-2.3f, 2.3f), //p3
         new Vector2(-2.3f, 2.3f), //p3
         new Vector2(-2.88f, 2.88f), //block with wokky
+        new Vector2(-2.88f, 2.88f), //block with wokky
         new Vector2(-2.88f, 2.88f) //floaty
         };
     
