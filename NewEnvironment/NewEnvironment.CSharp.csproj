@@ -89,6 +89,8 @@
     <Compile Include="Assets\scripts\scrollers\WallScroller.cs" />
     <Compile Include="Assets\scripts\singletons\GameLoader.cs" />
     <Compile Include="Assets\scripts\singletons\GameManager.cs" />
+    <Compile Include="Assets\scripts\ui\HealthBar.cs" />
+    <Compile Include="Assets\scripts\ui\Stat.cs" />
     <Compile Include="Assets\scripts\utils\BlockSpawner.cs" />
     <Compile Include="Assets\scripts\utils\DestroyByCameraDistance.cs" />
     <Compile Include="Assets\scripts\utils\DiveIn.cs" />

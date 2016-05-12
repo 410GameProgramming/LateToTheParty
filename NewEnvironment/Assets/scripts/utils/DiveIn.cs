@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
-using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class DiveIn : MonoBehaviour {	
 	void Update () {
         if (transform.position.y < -12)
         {
-            Application.LoadLevel(0);
+            SceneManager.LoadScene(0);
         }
 	}
 }

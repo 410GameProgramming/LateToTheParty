@@ -10,15 +10,21 @@ public class PlayerController : MonoBehaviour {
     public float maxSpeed = 3;
     public Gun.Weapon weapon;
     public Rigidbody2D rb2d;
+    public Stat playerHealth;
 
     //private variables 
     private Animator anim;
     private float maxVelocityY = 20.0f;
 
-    void Start () {
-    	weapon = Gun.Weapon.Handgun;
+    private void Awake() {
+        playerHealth.Initialize();
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
+    }
+
+    void Start () {
+        playerHealth.MaxVal = 100;
+        weapon = Gun.Weapon.Handgun;
 	}
 	
 	void Update () {
@@ -41,8 +47,13 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetButtonDown("Jump") && grounded){
             rb2d.AddForce(Vector2.up * jumpPower);
         }
-        print("Velocity is " + rb2d.velocity.y.ToString());
-	}
+        if (Input.GetKeyDown(KeyCode.Q)) {
+            playerHealth.CurrentVal -= 10;
+        }
+        if (Input.GetKeyDown(KeyCode.W)) {
+            playerHealth.CurrentVal += 10;
+        }
+    }
 
     void FixedUpdate(){
     	if (System.Math.Abs(rb2d.velocity.y) > maxVelocityY) {

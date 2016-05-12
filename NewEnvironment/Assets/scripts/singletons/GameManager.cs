@@ -3,7 +3,6 @@
  * Date: 4/27/2016
  */
 using UnityEngine;
-using System.Collections;
 
 public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
@@ -11,7 +10,6 @@ public class GameManager : MonoBehaviour {
     public bool isGrounded;
     public int totalScore;
     public float blockSpeed;
-    public int playerHealth;
     public GameObject player;
     public Vector2[] blockPositions = {
         new Vector2(-2.88f, 2.88f), //p1
@@ -32,9 +30,9 @@ public class GameManager : MonoBehaviour {
         new Vector2(-2.88f, 2.88f), //block with wokky
         new Vector2(-2.88f, 2.88f), //block with wokky
         new Vector2(-2.88f, 2.88f) //floaty
-        };
-    
-	void Awake () {
+    };
+
+    void Awake () {
         //Check if instance already exists
         if (instance == null){
             //if not, set instance to this
@@ -56,7 +54,6 @@ public class GameManager : MonoBehaviour {
     void initGame() {
         isGrounded = false;
         totalScore = 0;
-        playerHealth = 100;
         blockSpeed = 1.5f;
         player = GameObject.FindGameObjectWithTag("Player");
         //initialize all the variables here
