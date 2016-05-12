@@ -14,15 +14,13 @@ public class BlockSpawner : MonoBehaviour {
 
     public float delayTimer = 1f;
     float timer;
-    private GameObject player;
     private Rigidbody2D rb2d;
 
 
 
     void Start () {
         timer = delayTimer;
-        player = GameObject.FindGameObjectWithTag("Player");
-        rb2d = player.GetComponent<Rigidbody2D>();
+        rb2d = GameManager.instance.player.GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame

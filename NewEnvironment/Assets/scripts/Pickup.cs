@@ -12,7 +12,7 @@ public class Pickup : MonoBehaviour {
         
         if(col.tag == "Player")
         {
-            GetComponentInParent<PlayerController>();
+            GameManager.instance.player.GetComponent<PlayerController>();
             //player.pickup(type);
         }
 

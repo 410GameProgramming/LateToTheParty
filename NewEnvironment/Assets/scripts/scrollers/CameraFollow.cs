@@ -16,7 +16,6 @@ public class CameraFollow : MonoBehaviour {
     public bool freezeX;
 
 	void Start () {
-        player = GameObject.FindGameObjectWithTag("Player");
         wall = GameObject.FindGameObjectWithTag("Wall");
     }
 
