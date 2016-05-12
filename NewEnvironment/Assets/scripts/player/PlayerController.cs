@@ -8,12 +8,15 @@ public class PlayerController : MonoBehaviour {
     public float jumpPower = 150f;
     public bool grounded;
     public float maxSpeed = 3;
+    public Gun.Weapon weapon;
+    public Rigidbody2D rb2d;
 
     //private variables 
-    private Rigidbody2D rb2d;
     private Animator anim;
+    private float maxVelocityY = 20.0f;
 
     void Start () {
+    	weapon = Gun.Weapon.Handgun;
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
 	}
@@ -21,6 +24,13 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
         anim.SetBool("Grounded", grounded);
         anim.SetFloat("Speed", Mathf.Abs(rb2d.velocity.x));
+        if (Input.GetButtonDown("Fire2")) {
+            if ((int)weapon < 4) {
+                ++weapon;
+            } else {
+                weapon = 0;
+            }
+        }
 
         if (Input.GetAxis("Horizontal") < -0.1f){
             transform.localScale = new Vector3(-1, 1, 1);
@@ -31,11 +41,15 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetButtonDown("Jump") && grounded){
             rb2d.AddForce(Vector2.up * jumpPower);
         }
-        //print(rb2d.velocity.y);
+        print("Velocity is " + rb2d.velocity.y.ToString());
 	}
 
     void FixedUpdate(){
-
+    	if (System.Math.Abs(rb2d.velocity.y) > maxVelocityY) {
+            Vector3 newVelocity = rb2d.velocity.normalized;
+            newVelocity *= maxVelocityY;
+            rb2d.velocity = newVelocity;
+        }
         Vector3 easeVelocity = rb2d.velocity;
         //easeVelocity.y = rb2d.velocity.y;
         easeVelocity.z = 0.0f;
