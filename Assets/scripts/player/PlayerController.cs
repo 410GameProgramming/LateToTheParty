@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour {
 
     //private variables 
     private Animator anim;
+    private bool damaged = false;
     private float maxVelocityY = 20.0f;
 
     private void Awake() {
@@ -87,8 +88,17 @@ public class PlayerController : MonoBehaviour {
     }
 
     void OnTriggerEnter2D(Collider2D col) {
-        if (col.tag == "Attack") {
-            playerHealth.CurrentVal -= 10;
+        if (!damaged) {
+            if (col.tag == "Attack") {
+                playerHealth.CurrentVal -= 10;
+            }
+            damaged = true;
+            StartCoroutine(Invulnerability());
         }
+    }
+
+    IEnumerator Invulnerability() {
+        yield return new WaitForSeconds(2);
+        damaged = false;
     }
 }
