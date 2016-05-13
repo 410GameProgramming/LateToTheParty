@@ -57,6 +57,10 @@ public class GameManager : MonoBehaviour {
             };
 
         }
+        else if (currentLevel == 2)
+        {
+
+        }
         return new Vector2[]{new Vector2(-2.88f, 2.88f)};
     }
     public void initGame() {
