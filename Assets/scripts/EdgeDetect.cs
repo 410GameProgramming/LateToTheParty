@@ -21,7 +21,7 @@ public class EdgeDetect : MonoBehaviour {
         }
         else if(col.tag == "Player")
         {
-            enemy.Hit();
+           
             enemy.Flip();
         }
 
