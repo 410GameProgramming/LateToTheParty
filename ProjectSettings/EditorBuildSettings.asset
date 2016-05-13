@@ -4,22 +4,4 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/scenes/level0.unity
-  - enabled: 1
-    path: Assets/scenes/level_transition.unity
-  - enabled: 1
-    path: Assets/scenes/level1.unity
-  - enabled: 1
-<<<<<<< HEAD
-    path: Assets/scenes/game_over.unity
-=======
-    path: Assets/scenes/level2.unity
-  - enabled: 1
-    path: Assets/scenes/level3.unity
-  - enabled: 1
-    path: Assets/scenes/level4.unity
-  - enabled: 1
-    path: Assets/scenes/level5.unity
->>>>>>> b960e05429db987ecac51b2e72b7b539fdf31b26
+  m_Scenes: []
