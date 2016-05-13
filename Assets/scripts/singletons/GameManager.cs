@@ -57,9 +57,27 @@ public class GameManager : MonoBehaviour {
             };
 
         }
-        else if (currentLevel == 2)
+        else if (currentLevel == 3)
         {
-
+            return new Vector2[]{
+                //pattern1 
+                new Vector2(-5f, 5f), //p1
+                new Vector2(-5f, 5f), //p1
+                new Vector2(-5f, 5f), //p1
+                new Vector2(-5f, 5f), //p1
+                //pattern3
+                new Vector2(-4.5f, 4.5f), //p3
+                //pattern2
+                new Vector2(-5.5f, 5.5f), //p2
+                //pattern3
+                new Vector2(-4.5f, 4.5f), //p3
+                //floaty
+                new Vector2(-5.5f, 5.5f), //p2
+                //pattern1 
+                new Vector2(-5f, 5f), //p1
+                new Vector2(-5f, 5f), //p1
+                new Vector2(-5f, 5f), //p1
+            };
         }
         return new Vector2[]{new Vector2(-2.88f, 2.88f)};
     }

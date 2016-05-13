@@ -1561,4 +1561,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29912d94db7905d44b50fa531b7d87c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 184116, guid: df27562ee9d875747980568f88db6716, type: 2}
+  gameManager: {fileID: 117440, guid: aa2b34b604cbc0e419d71d53a30b29bb, type: 2}
