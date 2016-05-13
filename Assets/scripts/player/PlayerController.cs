@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour {
     public Gun.Weapon weapon;
     public Rigidbody2D rb2d;
     public Stat playerHealth;
+    public Transform groundCheck;
 
     //private variables 
     private Animator anim;
@@ -83,7 +84,11 @@ public class PlayerController : MonoBehaviour {
         if (rb2d.velocity.x < -maxSpeed){
             rb2d.velocity = new Vector2(-maxSpeed, rb2d.velocity.y);
         }
-
     }
 
+    void OnTriggerEnter2D(Collider2D col) {
+        if (col.tag == "Attack") {
+            playerHealth.CurrentVal -= 10;
+        }
+    }
 }
