@@ -25,13 +25,11 @@ public class Gun : MonoBehaviour {
     public float fireRate;
 
     private PlayerController playerCtrl;       // Reference to the PlayerControl script.
-    private Animator anim;					// Reference to the Animator component.
     private float nextFire;
     private ShotInstance shotInstance;
 
     void Awake() {
         fireRate = 0.15f;
-        anim = transform.root.gameObject.GetComponent<Animator>();
         playerCtrl = transform.root.GetComponent<PlayerController>();
     }
 

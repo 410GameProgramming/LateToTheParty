@@ -3,6 +3,8 @@
  * Date: 4/27/2016
  */
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
@@ -49,7 +51,7 @@ public class GameManager : MonoBehaviour {
 
         //Sets this to not be destroyed when reloading scene
         DontDestroyOnLoad(gameObject);
-	}
+    }
 
     public void initGame() {
         isGrounded = false;
@@ -58,5 +60,9 @@ public class GameManager : MonoBehaviour {
         currentLevel = 1;
         player = GameObject.FindGameObjectWithTag("Player");
         //initialize all the variables here
+    }
+
+    public void GameOver() {
+        SceneManager.LoadScene("game_over");
     }
 }

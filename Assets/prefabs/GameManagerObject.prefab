@@ -42,8 +42,8 @@ MonoBehaviour:
   isGrounded: 0
   totalScore: 0
   blockSpeed: 0
-  playerHealth: 0
   player: {fileID: 0}
+  currentLevel: 0
   blockPositions:
   - {x: -2.88, y: 2.88}
   - {x: -2.88, y: 2.88}
@@ -63,6 +63,8 @@ MonoBehaviour:
   - {x: -2.88, y: 2.88}
   - {x: -2.88, y: 2.88}
   - {x: -2.88, y: 2.88}
+  gameOver: {fileID: 11434084, guid: 7e89f0b80ca870e448668c2572c9d9dc, type: 2}
+  levelImage: {fileID: 124730, guid: cb49d34dd7f6f8349baa92ca1e74e484, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

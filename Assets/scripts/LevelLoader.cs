@@ -17,9 +17,7 @@ public class LevelLoader : MonoBehaviour {
         GameManager.instance.currentLevel++;
         SceneManager.LoadScene(GameManager.instance.currentLevel);
 	}
-    void Update()
-    {
+    void Update(){
         txtLevel.text = "Level " + GameManager.instance.currentLevel;
-
     }
 }
