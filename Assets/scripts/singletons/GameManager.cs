@@ -3,6 +3,8 @@
  * Date: 4/27/2016
  */
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
@@ -29,7 +31,7 @@ public class GameManager : MonoBehaviour {
 
         //Sets this to not be destroyed when reloading scene
         DontDestroyOnLoad(gameObject);
-	}
+    }
 
 
     public Vector2[] getBlockPositions()
@@ -68,5 +70,7 @@ public class GameManager : MonoBehaviour {
     public void initAgain() {
         player = GameObject.FindGameObjectWithTag("Player");
     }
-
+    public void GameOver() {
+        SceneManager.LoadScene("game_over");
+    }
 }

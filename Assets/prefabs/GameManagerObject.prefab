@@ -44,6 +44,30 @@ MonoBehaviour:
   blockSpeed: 0
   player: {fileID: 0}
   currentLevel: 0
+<<<<<<< HEAD
+  blockPositions:
+  - {x: -2.88, y: 2.88}
+  - {x: -2.88, y: 2.88}
+  - {x: -2.88, y: 2.88}
+  - {x: -3.4, y: 3.4}
+  - {x: -3.4, y: 3.4}
+  - {x: -3.4, y: 3.4}
+  - {x: -2.3, y: 2.3}
+  - {x: -2.3, y: 2.3}
+  - {x: -2.3, y: 2.3}
+  - {x: -2.88, y: 2.88}
+  - {x: -2.88, y: 2.88}
+  - {x: -2.88, y: 2.88}
+  - {x: -2.3, y: 2.3}
+  - {x: -2.3, y: 2.3}
+  - {x: -2.3, y: 2.3}
+  - {x: -2.88, y: 2.88}
+  - {x: -2.88, y: 2.88}
+  - {x: -2.88, y: 2.88}
+  gameOver: {fileID: 11434084, guid: 7e89f0b80ca870e448668c2572c9d9dc, type: 2}
+  levelImage: {fileID: 124730, guid: cb49d34dd7f6f8349baa92ca1e74e484, type: 2}
+=======
+>>>>>>> b960e05429db987ecac51b2e72b7b539fdf31b26
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

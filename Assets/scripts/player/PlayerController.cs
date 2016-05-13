@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour {
 	}
 	
 	void Update () {
+        CheckIfGameOver();
         anim.SetBool("Grounded", grounded);
         anim.SetFloat("Speed", Mathf.Abs(rb2d.velocity.x));
         if (Input.GetButtonDown("Fire2")) {
@@ -127,5 +128,11 @@ public class PlayerController : MonoBehaviour {
         yield return new WaitForSeconds(1.3f);
         sprite.color = Color.white;
         damaged = false;
+    }
+
+    private void CheckIfGameOver() {
+        if (playerHealth.CurrentVal <= 0) {
+            GameManager.instance.GameOver();
+        }
     }
 }
