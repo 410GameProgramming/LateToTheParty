@@ -18,7 +18,7 @@ public class FloatyTopDetection : MonoBehaviour {
         if (col.tag == "Projectile")
         {
             //print("death by bullet");
-            floaty.Hit(1);
+            floaty.Hit(2);
 
         }
         else if (col.tag == "Player")

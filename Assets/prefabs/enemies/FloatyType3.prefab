@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11476292}
   - 114: {fileID: 11431452}
   m_Layer: 0
-  m_Name: Floaty
+  m_Name: FloatyType3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
