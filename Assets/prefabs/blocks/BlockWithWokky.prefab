@@ -123,6 +123,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 478338}
+  - 114: {fileID: 11478736}
   m_Layer: 0
   m_Name: BlockWithWokky
   m_TagString: Ground
@@ -658,6 +659,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 30c14b72bf60d7c46b7708c9df9b9117, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11478736
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 150284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a52e1a0c1db6144d8ce87c13f9af834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11485198
