@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour {
 
     public Vector2[] getBlockPositions()
     {
-        if (currentLevel == 1)
+        if (currentLevel == 2)
         {
             return new Vector2[]{
                 //pattern1 
@@ -57,6 +57,10 @@ public class GameManager : MonoBehaviour {
             };
 
         }
+        else if (currentLevel == 2)
+        {
+
+        }
         return new Vector2[]{new Vector2(-2.88f, 2.88f)};
     }
     public void initGame() {
@@ -67,7 +71,9 @@ public class GameManager : MonoBehaviour {
         player = GameObject.FindGameObjectWithTag("Player");
         //initialize all the variables here
     }
-
+    public void initAgain() {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
     public void GameOver() {
         SceneManager.LoadScene("game_over");
     }
