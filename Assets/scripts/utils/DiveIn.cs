@@ -5,7 +5,7 @@ public class DiveIn : MonoBehaviour {
 	void Update () {
         if (transform.position.y < -12)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         }
 	}
 }

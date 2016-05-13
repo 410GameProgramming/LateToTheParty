@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour {
     public int totalScore;
     public float blockSpeed;
     public GameObject player;
+    public int currentLevel;
     public Vector2[] blockPositions = {
         new Vector2(-2.88f, 2.88f), //p1
         new Vector2(-2.88f, 2.88f), //p1
@@ -54,6 +55,7 @@ public class GameManager : MonoBehaviour {
         isGrounded = false;
         totalScore = 0;
         blockSpeed = 1.5f;
+        currentLevel = 1;
         player = GameObject.FindGameObjectWithTag("Player");
         //initialize all the variables here
     }
