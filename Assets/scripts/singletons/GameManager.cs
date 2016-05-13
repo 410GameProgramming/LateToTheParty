@@ -12,26 +12,7 @@ public class GameManager : MonoBehaviour {
     public float blockSpeed;
     public GameObject player;
     public int currentLevel;
-    public Vector2[] blockPositions = {
-        new Vector2(-2.88f, 2.88f), //p1
-        new Vector2(-2.88f, 2.88f), //p1
-        new Vector2(-2.88f, 2.88f), //p1
-        new Vector2(-3.4f, 3.4f), //p2
-        new Vector2(-3.4f, 3.4f), //p2
-        new Vector2(-3.4f, 3.4f), //p2
-        new Vector2(-2.3f, 2.3f), //p3
-        new Vector2(-2.3f, 2.3f), //p3
-        new Vector2(-2.3f, 2.3f), //p3
-        new Vector2(-2.88f, 2.88f), //p1
-        new Vector2(-2.88f, 2.88f), //p1
-        new Vector2(-2.88f, 2.88f), //p1
-        new Vector2(-2.3f, 2.3f), //p3
-        new Vector2(-2.3f, 2.3f), //p3
-        new Vector2(-2.3f, 2.3f), //p3
-        new Vector2(-2.88f, 2.88f), //block with wokky
-        new Vector2(-2.88f, 2.88f), //block with wokky
-        new Vector2(-2.88f, 2.88f) //floaty
-    };
+    public Vector2[][] blockPositions;
 
     void Awake () {
         //Check if instance already exists
@@ -51,6 +32,35 @@ public class GameManager : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
 	}
 
+
+    public Vector2[] getBlockPositions()
+    {
+        if (currentLevel == 1)
+        {
+            return new Vector2[]{
+            new Vector2(-2.88f, 2.88f), //p1
+            new Vector2(-2.88f, 2.88f), //p1
+            new Vector2(-2.88f, 2.88f), //p1
+            new Vector2(-3.4f, 3.4f), //p2
+            new Vector2(-3.4f, 3.4f), //p2
+            new Vector2(-3.4f, 3.4f), //p2
+            new Vector2(-2.3f, 2.3f), //p3
+            new Vector2(-2.3f, 2.3f), //p3
+            new Vector2(-2.3f, 2.3f), //p3
+            new Vector2(-2.88f, 2.88f), //p1
+            new Vector2(-2.88f, 2.88f), //p1
+            new Vector2(-2.88f, 2.88f), //p1
+            new Vector2(-2.3f, 2.3f), //p3
+            new Vector2(-2.3f, 2.3f), //p3
+            new Vector2(-2.3f, 2.3f), //p3
+            new Vector2(-2.88f, 2.88f), //block with wokky
+            new Vector2(-2.88f, 2.88f), //block with wokky
+            new Vector2(-2.88f, 2.88f) //floaty
+            };
+
+        }
+        return new Vector2[]{new Vector2(-2.88f, 2.88f)};
+    }
     public void initGame() {
         isGrounded = false;
         totalScore = 0;

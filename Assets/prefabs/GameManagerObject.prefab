@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 469556}
-  - 114: {fileID: 11496054}
+  - 114: {fileID: 11497174}
   m_Layer: 0
   m_Name: GameManagerObject
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11496054
+--- !u!114 &11497174
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -42,27 +42,8 @@ MonoBehaviour:
   isGrounded: 0
   totalScore: 0
   blockSpeed: 0
-  playerHealth: 0
   player: {fileID: 0}
-  blockPositions:
-  - {x: -2.88, y: 2.88}
-  - {x: -2.88, y: 2.88}
-  - {x: -2.88, y: 2.88}
-  - {x: -3.4, y: 3.4}
-  - {x: -3.4, y: 3.4}
-  - {x: -3.4, y: 3.4}
-  - {x: -2.3, y: 2.3}
-  - {x: -2.3, y: 2.3}
-  - {x: -2.3, y: 2.3}
-  - {x: -2.88, y: 2.88}
-  - {x: -2.88, y: 2.88}
-  - {x: -2.88, y: 2.88}
-  - {x: -2.3, y: 2.3}
-  - {x: -2.3, y: 2.3}
-  - {x: -2.3, y: 2.3}
-  - {x: -2.88, y: 2.88}
-  - {x: -2.88, y: 2.88}
-  - {x: -2.88, y: 2.88}
+  currentLevel: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

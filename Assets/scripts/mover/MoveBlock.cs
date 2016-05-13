@@ -8,8 +8,9 @@ public class MoveBlock : MonoBehaviour {
     private Vector3 pos2;
 
 	void Start () {
-	    pos1 = new Vector3(GameManager.instance.blockPositions[index].x, transform.position.y, 0f);
-        pos2 = new Vector3(GameManager.instance.blockPositions[index].y, transform.position.y, 0f);
+        Vector2[] blockPositions = GameManager.instance.getBlockPositions();
+        pos1 = new Vector3(blockPositions[index].x, transform.position.y, 0f);
+        pos2 = new Vector3(blockPositions[index].y, transform.position.y, 0f);
 	}
 	
 	// Update is called once per frame
