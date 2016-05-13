@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 438074}
   - 114: {fileID: 11496754}
   m_Layer: 8
-  m_Name: BlockWithWokkyLEVEL2
+  m_Name: pattern1_wokky_level2
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
