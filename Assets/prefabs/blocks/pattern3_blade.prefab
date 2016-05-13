@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 424676}
   - 198: {fileID: 19872338}
   - 199: {fileID: 19937898}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crumble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 473288}
   - 212: {fileID: 21225520}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 446660}
   - 212: {fileID: 21298972}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   - 4: {fileID: 410616}
   - 61: {fileID: 6103834}
   - 114: {fileID: 11410004}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: collider
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 415984}
   - 212: {fileID: 21242894}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block2 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 415152}
   - 212: {fileID: 21223892}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block2 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 461212}
   - 212: {fileID: 21270274}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,7 +123,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 488724}
   - 212: {fileID: 21263536}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block2 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ GameObject:
   - 212: {fileID: 21226992}
   - 114: {fileID: 11486894}
   - 114: {fileID: 11404118}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: blade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -157,7 +157,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 456464}
   - 58: {fileID: 5830206}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: collider (1)
   m_TagString: Attack
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 491800}
   - 114: {fileID: 11405252}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pattern3_blade
   m_TagString: Ground
   m_Icon: {fileID: 0}

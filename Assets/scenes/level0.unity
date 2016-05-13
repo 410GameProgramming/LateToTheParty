@@ -108,7 +108,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 125488732}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.8, z: 0}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 598156132}
@@ -462,6 +462,7 @@ MonoBehaviour:
     health: {fileID: 195916439}
     maxVal: 0
     currentVal: 0
+  groundCheck: {fileID: 2111408795}
 --- !u!50 &598156128
 Rigidbody2D:
   serializedVersion: 2
@@ -1743,7 +1744,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2111408794}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06, y: -0.34, z: 0}
+  m_LocalPosition: {x: -0.06, y: -0.6, z: 0}
   m_LocalScale: {x: 0.45, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 598156132}

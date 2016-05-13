@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 488434}
   - 212: {fileID: 21276806}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,7 +24,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 455086}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ProjSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   - 4: {fileID: 432346}
   - 61: {fileID: 6160434}
   - 114: {fileID: 11497574}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TopCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 408788}
   - 61: {fileID: 6115982}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Obstacle
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 474048}
   - 61: {fileID: 6140740}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: collider
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 438210}
   - 61: {fileID: 6191158}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Obstacle
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 434452}
   - 61: {fileID: 6157696}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HitWindow
   m_TagString: Attack
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 473592}
   - 114: {fileID: 11416442}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pattern1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 409078}
   - 114: {fileID: 11467012}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BlockWithWokky
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 427690}
   - 212: {fileID: 21235188}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block2 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -170,7 +170,7 @@ GameObject:
   - 4: {fileID: 426098}
   - 61: {fileID: 6152264}
   - 114: {fileID: 11495476}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: frontCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,7 +186,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 494644}
   - 212: {fileID: 21252474}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ GameObject:
   - 50: {fileID: 5014552}
   - 95: {fileID: 9535492}
   - 114: {fileID: 11426582}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wokky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 401440}
   - 212: {fileID: 21251858}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

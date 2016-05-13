@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 435682}
   - 61: {fileID: 6104242}
   - 114: {fileID: 11423468}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: collider (1)
   m_TagString: Attack
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 424762}
   - 61: {fileID: 6198826}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: collider
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - 4: {fileID: 480356}
   - 114: {fileID: 11453922}
   - 114: {fileID: 11465800}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pattern1_spikes_moving
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 490226}
   - 212: {fileID: 21232550}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 407396}
   - 212: {fileID: 21281048}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - 4: {fileID: 418292}
   - 198: {fileID: 19884008}
   - 199: {fileID: 19907454}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crumble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 497442}
   - 212: {fileID: 21219460}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 464252}
   - 212: {fileID: 21211276}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 447512}
   - 212: {fileID: 21268958}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block2 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

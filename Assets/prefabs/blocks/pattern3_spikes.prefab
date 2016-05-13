@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 480864}
   - 198: {fileID: 19879718}
   - 199: {fileID: 19918586}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: crumble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 464030}
   - 212: {fileID: 21200372}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 487894}
   - 212: {fileID: 21270120}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spikes (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 484116}
   - 212: {fileID: 21255676}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 420988}
   - 212: {fileID: 21217862}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block2 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 488486}
   - 61: {fileID: 6195680}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: collider
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 403112}
   - 114: {fileID: 11495370}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pattern3_spikes
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 432528}
   - 212: {fileID: 21239324}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,7 +138,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 402154}
   - 212: {fileID: 21254246}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block2 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -154,7 +154,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 428330}
   - 212: {fileID: 21271752}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   - 4: {fileID: 481694}
   - 61: {fileID: 6164272}
   - 114: {fileID: 11487384}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: collider (1)
   m_TagString: Attack
   m_Icon: {fileID: 0}
@@ -187,7 +187,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 472260}
   - 212: {fileID: 21241762}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block2 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
