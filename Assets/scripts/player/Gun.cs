@@ -11,6 +11,11 @@ public class Gun : MonoBehaviour {
         Shotgun,
         Rapid
     };
+    public enum ShotInstance {
+        firstShot,
+        SecondShot,
+        thirdShot
+    };
     [HideInInspector]
     public int weapon;
     public Rigidbody2D bullet;
@@ -22,6 +27,7 @@ public class Gun : MonoBehaviour {
     private PlayerController playerCtrl;       // Reference to the PlayerControl script.
     private Animator anim;					// Reference to the Animator component.
     private float nextFire;
+    private ShotInstance shotInstance;
 
     void Awake() {
         fireRate = 0.15f;
@@ -47,12 +53,7 @@ public class Gun : MonoBehaviour {
                 case 1:
                     fireRate = 0.15f;
                     nextFire = Time.time + fireRate;
-                    bulletInstance = Instantiate(bullet, transform.position, Quaternion.Euler(new Vector3(0, 0, 0))) as Rigidbody2D;
-                    bulletInstance.velocity = new Vector2(0, -speed);
-                    bulletInstance = Instantiate(bullet, transform.position, Quaternion.Euler(new Vector3(0, 0, 0))) as Rigidbody2D;
-                    bulletInstance.velocity = new Vector2(0.5f * speed, -speed);
-                    bulletInstance = Instantiate(bullet, transform.position, Quaternion.Euler(new Vector3(0, 0, 0))) as Rigidbody2D;
-                    bulletInstance.velocity = new Vector2(0.5f * -speed, -speed);
+                    StartCoroutine(SpreadTimer());
                     break;
                 case 2:
                     fireRate = 1.0f;
@@ -60,7 +61,7 @@ public class Gun : MonoBehaviour {
                     StartCoroutine(TriBulletTimer());
                     break;
                 case 3:
-                    fireRate = 2.0f;
+                    fireRate = 1.0f;
                     nextFire = Time.time + fireRate;
                     StartCoroutine(ShotgunTimer());
                     break;
@@ -70,6 +71,29 @@ public class Gun : MonoBehaviour {
                     bulletInstance = Instantiate(bullet, transform.position, Quaternion.Euler(new Vector3(0, 0, 0))) as Rigidbody2D;
                     bulletInstance.transform.localScale = Vector3.Scale(transform.localScale, new Vector3(1.0f, 1.0f, 0));
                     bulletInstance.velocity = new Vector2(0, -speed);
+                    break;
+            }
+        }
+    }
+
+    IEnumerator SpreadTimer() {
+        Rigidbody2D bulletInstance;
+        for (shotInstance = 0; (int)shotInstance < 3; ++shotInstance) {
+            switch (shotInstance) {
+                case (ShotInstance.firstShot):
+                    bulletInstance = Instantiate(bullet, transform.position, Quaternion.Euler(new Vector3(0, 0, 0))) as Rigidbody2D;
+                    bulletInstance.velocity = new Vector2(0, -speed);
+                    yield return new WaitForSeconds(0.01f);
+                    break;
+                case (ShotInstance.SecondShot):
+                    bulletInstance = Instantiate(bullet, transform.position, Quaternion.Euler(new Vector3(0, 0, 0))) as Rigidbody2D;
+                    bulletInstance.velocity = new Vector2(0.5f * speed, -speed);
+                    yield return new WaitForSeconds(0.01f);
+                    break;
+                case (ShotInstance.thirdShot):
+                    bulletInstance = Instantiate(bullet, transform.position, Quaternion.Euler(new Vector3(0, 0, 0))) as Rigidbody2D;
+                    bulletInstance.velocity = new Vector2(0.5f * -speed, -speed);
+                    yield return new WaitForSeconds(0.01f);
                     break;
             }
         }

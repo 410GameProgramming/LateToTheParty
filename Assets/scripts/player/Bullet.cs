@@ -10,9 +10,11 @@ public class Bullet : MonoBehaviour {
 		if(col.tag == "Enemy") {
 			Destroy (gameObject);
 		}
-		if(col.tag == "solid block") {
-			Destroy (gameObject);
-		} else if(col.gameObject.tag != "Player") {
+        if (col.tag == "solid block") {
+            Destroy(gameObject);
+        } else if (col.tag == "Wall") {
+            Destroy(gameObject);
+        } else if(col.gameObject.tag != "Player") {
 			Destroy (gameObject);
 		}
 	}

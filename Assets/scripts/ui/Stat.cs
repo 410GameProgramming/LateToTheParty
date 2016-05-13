@@ -12,6 +12,9 @@ public class Stat {
 
     public float CurrentVal {
         get {
+            if (currentVal > maxVal) {
+                currentVal = maxVal;
+            }
             return currentVal;
         }
 
