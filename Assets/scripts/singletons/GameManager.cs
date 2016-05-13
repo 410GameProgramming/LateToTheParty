@@ -34,9 +34,9 @@ public class GameManager : MonoBehaviour {
     }
 
 
-    public Vector2[] getBlockPositions()
+    public Vector2[] getBlockPositions(int level)
     {
-        if (currentLevel == 2)
+        if (level == 1)
         {
             return new Vector2[]{
                 //pattern1 
@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour {
             };
 
         }
-        else if (currentLevel == 3)
+        else if (level == 2)
         {
             return new Vector2[]{
                 //pattern1 
@@ -79,6 +79,28 @@ public class GameManager : MonoBehaviour {
                 new Vector2(-5f, 5f), //p1
             };
         }
+        else if (level == 3)
+        {
+            return new Vector2[]{
+                //pattern1 
+                new Vector2(-5f, 5f), //p1
+                //pattern3
+                new Vector2(-4.5f, 4.5f), //p3
+                //pattern2
+                new Vector2(-5.5f, 5.5f), //p2
+                //pattern1 
+                new Vector2(-5f, 5f), //p1
+                new Vector2(-5f, 5f), //p1
+                new Vector2(-5f, 5f), //p1
+                //pattern3
+                new Vector2(-4.5f, 4.5f), //p3
+                //pattern1 
+                new Vector2(-5f, 5f), //p1
+                new Vector2(-5f, 5f), //p1
+
+            };
+        }
+
         return new Vector2[]{new Vector2(-2.88f, 2.88f)};
     }
     public void initGame() {

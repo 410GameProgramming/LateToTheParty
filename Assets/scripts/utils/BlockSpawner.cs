@@ -19,11 +19,11 @@ public class BlockSpawner : MonoBehaviour {
 
     private Vector2[] blockPositions;
     private int blockCount;
-
+    public int level;
     void Start () {
         timer = delayTimer;
         rb2d = GameManager.instance.player.GetComponent<Rigidbody2D>();
-        blockPositions = GameManager.instance.getBlockPositions();
+        blockPositions = GameManager.instance.getBlockPositions(level);
         blockCount = 0;
 	}
 	

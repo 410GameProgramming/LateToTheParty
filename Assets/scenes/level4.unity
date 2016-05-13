@@ -388,6 +388,7 @@ MonoBehaviour:
   - {fileID: 169572, guid: e359d053042123444a3e51a928b6aa65, type: 2}
   - {fileID: 109038, guid: 88832d83ffdc891488da26fdd45d3bc6, type: 2}
   delayTimer: 0.3
+  level: 4
 --- !u!4 &372518182
 Transform:
   m_ObjectHideFlags: 0
