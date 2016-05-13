@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 469556}
-  - 114: {fileID: 11496054}
+  - 114: {fileID: 11497174}
   m_Layer: 0
   m_Name: GameManagerObject
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11496054
+--- !u!114 &11497174
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -44,6 +44,7 @@ MonoBehaviour:
   blockSpeed: 0
   player: {fileID: 0}
   currentLevel: 0
+<<<<<<< HEAD
   blockPositions:
   - {x: -2.88, y: 2.88}
   - {x: -2.88, y: 2.88}
@@ -65,6 +66,8 @@ MonoBehaviour:
   - {x: -2.88, y: 2.88}
   gameOver: {fileID: 11434084, guid: 7e89f0b80ca870e448668c2572c9d9dc, type: 2}
   levelImage: {fileID: 124730, guid: cb49d34dd7f6f8349baa92ca1e74e484, type: 2}
+=======
+>>>>>>> b960e05429db987ecac51b2e72b7b539fdf31b26
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

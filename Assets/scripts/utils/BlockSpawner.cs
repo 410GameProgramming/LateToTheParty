@@ -4,6 +4,7 @@
  */
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class BlockSpawner : MonoBehaviour {
 
@@ -16,11 +17,14 @@ public class BlockSpawner : MonoBehaviour {
     float timer;
     private Rigidbody2D rb2d;
 
-
+    private Vector2[] blockPositions;
+    private int blockCount;
 
     void Start () {
         timer = delayTimer;
         rb2d = GameManager.instance.player.GetComponent<Rigidbody2D>();
+        blockPositions = GameManager.instance.getBlockPositions();
+        blockCount = 0;
 	}
 	
 	// Update is called once per frame
@@ -28,13 +32,23 @@ public class BlockSpawner : MonoBehaviour {
         timer -= Time.deltaTime;
         if (timer <= 0 && !GameManager.instance.isGrounded && rb2d.velocity.y<-7){
             //get a random pattern
-            patternNumber = Random.Range(0, blocks.Length);
+            patternNumber = Random.Range(0, blocks.Length-1);
+//            print(blocks.Length + "----Pat:" + patternNumber);
+            //print(blockPositions[patternNumber].x);
             //print(patternNumber + "-" + GameManager.instance.blockPositions.Length);
-            float newX = Random.Range(GameManager.instance.blockPositions[patternNumber].x, 
-                                      GameManager.instance.blockPositions[patternNumber].y);
+            float newX = Random.Range(blockPositions[patternNumber].x,
+                                      blockPositions[patternNumber].y);
             Vector3 blockPosition = new Vector3(newX, transform.position.y, transform.position.z);
             Instantiate(blocks[patternNumber], blockPosition, transform.rotation);
+            blockCount++;
             timer = delayTimer;
         }
 	}
+    void LateUpdate(){
+        if (blockCount > 100)
+        {
+            SceneManager.LoadScene(1);
+        }
+    }
+
 }

@@ -14,27 +14,7 @@ public class GameManager : MonoBehaviour {
     public float blockSpeed;
     public GameObject player;
     public int currentLevel;
-    public Vector2[] blockPositions = {
-        new Vector2(-2.88f, 2.88f), //p1
-        new Vector2(-2.88f, 2.88f), //p1
-        new Vector2(-2.88f, 2.88f), //p1
-        new Vector2(-3.4f, 3.4f), //p2
-        new Vector2(-3.4f, 3.4f), //p2
-        new Vector2(-3.4f, 3.4f), //p2
-        new Vector2(-2.3f, 2.3f), //p3
-        new Vector2(-2.3f, 2.3f), //p3
-        new Vector2(-2.3f, 2.3f), //p3
-        new Vector2(-2.88f, 2.88f), //p1
-        new Vector2(-2.88f, 2.88f), //p1
-        new Vector2(-2.88f, 2.88f), //p1
-        new Vector2(-2.3f, 2.3f), //p3
-        new Vector2(-2.3f, 2.3f), //p3
-        new Vector2(-2.3f, 2.3f), //p3
-        new Vector2(-2.88f, 2.88f), //block with wokky
-        new Vector2(-2.88f, 2.88f), //block with wokky
-        new Vector2(-2.88f, 2.88f) //floaty
-    };
-
+    public Vector2[][] blockPositions;
     void Awake () {
         //Check if instance already exists
         if (instance == null){
@@ -53,6 +33,32 @@ public class GameManager : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
     }
 
+
+    public Vector2[] getBlockPositions()
+    {
+        if (currentLevel == 1)
+        {
+            return new Vector2[]{
+                //pattern1 
+                new Vector2(-5f, 5f), //p1
+                new Vector2(-5f, 5f), //p1
+                //pattern2
+                new Vector2(-5.5f, 5.5f), //p2
+                new Vector2(-5.5f, 5.5f), //p2
+                //pattern3
+                new Vector2(-4.5f, 4.5f), //p3
+                new Vector2(-4.5f, 4.5f), //p3
+                //pattern1 with spike
+                new Vector2(-5f, 5f), //p1_spike
+                //pattern2 with spike
+                new Vector2(-4.5f, 4.5f), //p3_spike
+                //pattern1 with wokky
+                new Vector2(-5f, 5f), //p1_wokky
+            };
+
+        }
+        return new Vector2[]{new Vector2(-2.88f, 2.88f)};
+    }
     public void initGame() {
         isGrounded = false;
         totalScore = 0;
