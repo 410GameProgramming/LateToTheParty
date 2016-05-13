@@ -19,3 +19,5 @@ EditorBuildSettings:
     path: Assets/scenes/level4.unity
   - enabled: 1
     path: Assets/scenes/level5.unity
+  - enabled: 1
+    path: Assets/scenes/game_over.unity
