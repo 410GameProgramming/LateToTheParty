@@ -9,6 +9,7 @@ TagManager:
   - Attack
   - Obstacle
   - Ground
+  - Projectile
   layers:
   - Default
   - TransparentFX
