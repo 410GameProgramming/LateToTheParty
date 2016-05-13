@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour {
     public Transform groundCheck;
 
     //private variables 
+    private SpriteRenderer sprite;
     private Animator anim;
     private bool damaged = false;
     private float maxVelocityY = 20.0f;
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour {
     private void Awake() {
         playerHealth.Initialize();
         rb2d = gameObject.GetComponent<Rigidbody2D>();
+        sprite = gameObject.GetComponent<SpriteRenderer>();
         anim = gameObject.GetComponent<Animator>();
     }
 
@@ -90,7 +92,31 @@ public class PlayerController : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D col) {
         if (!damaged) {
             if (col.tag == "Attack") {
+                if (System.Math.Abs(rb2d.velocity.y) > 0.0f) {
+                    Vector3 newVelocity = rb2d.velocity.normalized;
+                    newVelocity *= 0.0f;
+                    rb2d.velocity = newVelocity;
+                }
+                rb2d.AddForce((Vector2.up * 350));
                 playerHealth.CurrentVal -= 10;
+                sprite.color = Color.red;
+            }
+            damaged = true;
+            StartCoroutine(Invulnerability());
+        }
+    }
+
+    void OnTriggerStay(Collider col) {
+        if (!damaged) {
+            if (col.tag == "Attack") {
+                if (System.Math.Abs(rb2d.velocity.y) > 0.0f) {
+                    Vector3 newVelocity = rb2d.velocity.normalized;
+                    newVelocity *= 0.0f;
+                    rb2d.velocity = newVelocity;
+                }
+                rb2d.AddForce((Vector2.up * 350));
+                playerHealth.CurrentVal -= 10;
+                sprite.color = Color.red;
             }
             damaged = true;
             StartCoroutine(Invulnerability());
@@ -98,7 +124,8 @@ public class PlayerController : MonoBehaviour {
     }
 
     IEnumerator Invulnerability() {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1.5f);
+        sprite.color = Color.white;
         damaged = false;
     }
 }

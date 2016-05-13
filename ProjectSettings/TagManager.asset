@@ -59,3 +59,6 @@ TagManager:
   - name: Player
     uniqueID: 3878694589
     locked: 0
+  - name: Floaty
+    uniqueID: 329707501
+    locked: 0
