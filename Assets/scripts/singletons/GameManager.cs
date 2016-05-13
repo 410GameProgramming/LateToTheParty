@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour {
 
     public Vector2[] getBlockPositions()
     {
-        if (currentLevel == 1)
+        if (currentLevel == 2)
         {
             return new Vector2[]{
                 //pattern1 
@@ -65,4 +65,8 @@ public class GameManager : MonoBehaviour {
         player = GameObject.FindGameObjectWithTag("Player");
         //initialize all the variables here
     }
+    public void initAgain() {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
 }

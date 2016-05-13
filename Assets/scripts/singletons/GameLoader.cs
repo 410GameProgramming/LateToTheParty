@@ -17,8 +17,8 @@ public class GameLoader : MonoBehaviour {
 
     void OnLevelWasLoaded(int level)
     {
-        GameManager.instance.initGame();
-        print("Level: " + level);
+        GameManager.instance.initAgain();
+        //print("Level: " + level);
     }
 	
 }
