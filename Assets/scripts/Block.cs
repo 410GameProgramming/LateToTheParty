@@ -13,7 +13,7 @@ public class Block : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (blockHealth == 0)
+        if (blockHealth <= 0)
         {
             Instantiate(destroy, transform.position, transform.rotation);
             Destroy(gameObject.transform.parent.gameObject);

@@ -460,8 +460,8 @@ MonoBehaviour:
   rb2d: {fileID: 598156128}
   playerHealth:
     health: {fileID: 195916439}
-    maxVal: 0
-    currentVal: 0
+    maxVal: 100
+    currentVal: 100
   groundCheck: {fileID: 2111408795}
 --- !u!50 &598156128
 Rigidbody2D:
