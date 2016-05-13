@@ -12,18 +12,23 @@ public class PlayerController : MonoBehaviour {
     public Rigidbody2D rb2d;
     public Stat playerHealth;
     public Transform groundCheck;
+    public AudioClip hurtSound;
+    public AudioClip jumpSound;
+    public AudioClip landSound;
 
     //private variables 
     private SpriteRenderer sprite;
     private Animator anim;
     private bool damaged = false;
     private float maxVelocityY = 20.0f;
+    private AudioSource source;
 
     private void Awake() {
         playerHealth.Initialize();
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         sprite = gameObject.GetComponent<SpriteRenderer>();
         anim = gameObject.GetComponent<Animator>();
+        source = GetComponent<AudioSource>();
     }
 
     void Start () {
@@ -50,6 +55,7 @@ public class PlayerController : MonoBehaviour {
             transform.localScale = new Vector3(1, 1, 1);
         }
         if (Input.GetButtonDown("Jump") && grounded){
+            source.PlayOneShot(jumpSound);
             rb2d.AddForce(Vector2.up * jumpPower);
         }
         if (Input.GetKeyDown(KeyCode.Q)) {
@@ -93,6 +99,7 @@ public class PlayerController : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D col) {
         if (!damaged) {
             if (col.tag == "Attack") {
+                source.PlayOneShot(hurtSound);
                 if (System.Math.Abs(rb2d.velocity.y) > 0.0f) {
                     Vector3 newVelocity = rb2d.velocity.normalized;
                     newVelocity *= 0.0f;
@@ -103,6 +110,7 @@ public class PlayerController : MonoBehaviour {
                 sprite.color = Color.red;
             }
             damaged = true;
+            source.PlayOneShot(landSound);
             StartCoroutine(Invulnerability());
         }
     }

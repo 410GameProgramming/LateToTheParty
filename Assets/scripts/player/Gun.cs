@@ -23,14 +23,18 @@ public class Gun : MonoBehaviour {
     public float speed;
     [HideInInspector]
     public float fireRate;
+    public AudioClip shootSound;
+
 
     private PlayerController playerCtrl;       // Reference to the PlayerControl script.
     private float nextFire;
     private ShotInstance shotInstance;
+    private AudioSource source;
 
     void Awake() {
         fireRate = 0.15f;
         playerCtrl = transform.root.GetComponent<PlayerController>();
+        source = GetComponent<AudioSource>();
     }
 
     void Update() {
@@ -41,6 +45,7 @@ public class Gun : MonoBehaviour {
         weapon = (int)playerCtrl.weapon;
         Rigidbody2D bulletInstance;
         if (Input.GetButton("Fire1") && Time.time > nextFire) {
+            source.PlayOneShot(shootSound);
             switch (weapon) {
                 case 0:
                     fireRate = 0.5f;
