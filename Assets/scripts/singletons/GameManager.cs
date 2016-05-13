@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour {
         if (instance == null){
             //if not, set instance to this
             instance = this;
-
+            initGame();
         }
         //If instance already exists and it's not this:
         else if (instance != this)
@@ -48,10 +48,9 @@ public class GameManager : MonoBehaviour {
 
         //Sets this to not be destroyed when reloading scene
         DontDestroyOnLoad(gameObject);
-        initGame();
 	}
 
-    void initGame() {
+    public void initGame() {
         isGrounded = false;
         totalScore = 0;
         blockSpeed = 1.5f;

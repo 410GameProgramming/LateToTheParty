@@ -14,5 +14,11 @@ public class GameLoader : MonoBehaviour {
             Instantiate(gameManager);
         }
 	}
+
+    void OnLevelWasLoaded(int level)
+    {
+        GameManager.instance.initGame();
+        print("Level: " + level);
+    }
 	
 }
