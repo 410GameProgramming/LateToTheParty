@@ -4,6 +4,7 @@
  */
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class BlockSpawner : MonoBehaviour {
 
@@ -17,11 +18,13 @@ public class BlockSpawner : MonoBehaviour {
     private Rigidbody2D rb2d;
 
     private Vector2[] blockPositions;
+    private int blockCount;
 
     void Start () {
         timer = delayTimer;
         rb2d = GameManager.instance.player.GetComponent<Rigidbody2D>();
         blockPositions = GameManager.instance.getBlockPositions();
+        blockCount = 0;
 	}
 	
 	// Update is called once per frame
@@ -37,7 +40,15 @@ public class BlockSpawner : MonoBehaviour {
                                       blockPositions[patternNumber].y);
             Vector3 blockPosition = new Vector3(newX, transform.position.y, transform.position.z);
             Instantiate(blocks[patternNumber], blockPosition, transform.rotation);
+            blockCount++;
             timer = delayTimer;
         }
 	}
+    void LateUpdate(){
+        if (blockCount > 100)
+        {
+            SceneManager.LoadScene(1);
+        }
+    }
+
 }

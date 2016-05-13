@@ -15,6 +15,7 @@ public class LevelLoader : MonoBehaviour {
 	IEnumerator loadLevel () {        
 	    yield return new WaitForSeconds (1);
         GameManager.instance.currentLevel++;
+        print(GameManager.instance.currentLevel);
         SceneManager.LoadScene(GameManager.instance.currentLevel);
 	}
     void Update()
