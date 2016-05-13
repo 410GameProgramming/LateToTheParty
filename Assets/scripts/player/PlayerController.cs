@@ -106,7 +106,7 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    void OnTriggerStay(Collider col) {
+    /*void OnTriggerStay2D(Collider2D col) {
         if (!damaged) {
             if (col.tag == "Attack") {
                 if (System.Math.Abs(rb2d.velocity.y) > 0.0f) {
@@ -121,10 +121,10 @@ public class PlayerController : MonoBehaviour {
             damaged = true;
             StartCoroutine(Invulnerability());
         }
-    }
+    }*/
 
     IEnumerator Invulnerability() {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1.3f);
         sprite.color = Color.white;
         damaged = false;
     }
