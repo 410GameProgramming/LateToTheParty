@@ -145,6 +145,7 @@ public class GameManager : MonoBehaviour {
         return new Vector2[]{new Vector2(-2.88f, 2.88f)};
     }
     public void initGame() {
+        SceneManager.LoadScene(8);
         isGrounded = false;
         totalScore = 0;
         blockSpeed = 1.5f;
