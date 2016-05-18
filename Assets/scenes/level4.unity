@@ -465,6 +465,7 @@ MonoBehaviour:
   - {fileID: 130964, guid: ed37126a56df79a42a38a6f5521ce04b, type: 2}
   delayTimer: 0.3
   level: 4
+  levelEndPlatform: {fileID: 146744, guid: edcf4779e0552e34b882da78e6088bb3, type: 2}
 --- !u!4 &372518182
 Transform:
   m_ObjectHideFlags: 0

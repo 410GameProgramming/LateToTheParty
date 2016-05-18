@@ -465,6 +465,7 @@ MonoBehaviour:
   - {fileID: 109038, guid: 88832d83ffdc891488da26fdd45d3bc6, type: 2}
   delayTimer: 0.3
   level: 1
+  levelEndPlatform: {fileID: 146744, guid: edcf4779e0552e34b882da78e6088bb3, type: 2}
 --- !u!4 &372518182
 Transform:
   m_ObjectHideFlags: 0
@@ -741,7 +742,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -752,7 +753,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -763,7 +764,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!1 &978872740
 GameObject:
   m_ObjectHideFlags: 0

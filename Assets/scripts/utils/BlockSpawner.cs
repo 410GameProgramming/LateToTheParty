@@ -20,17 +20,21 @@ public class BlockSpawner : MonoBehaviour {
     private Vector2[] blockPositions;
     private int blockCount;
     public int level;
+    public GameObject levelEndPlatform;
+    public static bool levelEnded;
+    public int totalNumOfBlocks = 100;
     void Start () {
         timer = delayTimer;
         rb2d = GameManager.instance.player.GetComponent<Rigidbody2D>();
         blockPositions = GameManager.instance.getBlockPositions(level);
         blockCount = 0;
+        BlockSpawner.levelEnded = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
         timer -= Time.deltaTime;
-        if (timer <= 0 && !GameManager.instance.isGrounded && rb2d.velocity.y<-7){
+        if (timer <= 0 && blockCount<=totalNumOfBlocks && !GameManager.instance.isGrounded && rb2d.velocity.y<-7){
             //get a random pattern
             patternNumber = Random.Range(0, blocks.Length-1);
 //            print(blocks.Length + "----Pat:" + patternNumber);
@@ -44,10 +48,23 @@ public class BlockSpawner : MonoBehaviour {
             timer = delayTimer;
         }
 	}
-    void LateUpdate(){
-        if (blockCount > 100)
+
+    IEnumerator createPlatform()
+    {
+        yield return new WaitForSeconds(5);
+        if (BlockSpawner.levelEnded == false)
         {
-            SceneManager.LoadScene(1);
+            Instantiate(levelEndPlatform, transform.position, transform.rotation);
+        }
+        BlockSpawner.levelEnded = true;
+    }
+     
+    void LateUpdate(){
+        if (!BlockSpawner.levelEnded && blockCount > totalNumOfBlocks)
+        {
+            
+            StartCoroutine(createPlatform());
+            //SceneManager.LoadScene(1);
         }
     }
 
