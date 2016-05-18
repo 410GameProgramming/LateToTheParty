@@ -108,6 +108,11 @@ public class PlayerController : MonoBehaviour {
                 rb2d.AddForce((Vector2.up * 350));
                 playerHealth.CurrentVal -= 10;
                 sprite.color = Color.red;
+            }else if(col.tag == "EnemyProjectile")
+            {
+                source.PlayOneShot(hurtSound);
+                playerHealth.CurrentVal -= 5;
+                sprite.color = Color.red;
             }
             damaged = true;
             source.PlayOneShot(landSound);
