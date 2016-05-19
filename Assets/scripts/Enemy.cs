@@ -78,7 +78,7 @@ public class Enemy : MonoBehaviour {
     {
         Instantiate(deathFX, transform.position, transform.rotation);        
         Destroy(gameObject);
-        GameManager.instance.totalScore += 5;
+        GameManager.instance.totalScore += 10;
         //displayScore();
     }
     /*
