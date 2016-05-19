@@ -7,11 +7,13 @@ public class Pickup : MonoBehaviour {
 
     private PlayerController player;
 
-    void OnTriggerEnter2D(Collider2D col)
+    void OnTriggerStay2D(Collider2D col)
     {
         
         if(col.tag == "Player")
-        {
+        {   
+            //display price + "press q to purchase"
+
             GameManager.instance.player.GetComponent<PlayerController>();
             //player.pickup(type);
         }

@@ -34,6 +34,7 @@ public class Floaty : MonoBehaviour {
         }
         if (health <= 0)
         {
+            GameManager.instance.totalScore += 20;
             Destroy(gameObject);
         }
 
