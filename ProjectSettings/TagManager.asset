@@ -10,6 +10,7 @@ TagManager:
   - Obstacle
   - Ground
   - Projectile
+  - EnemyProjectile
   layers:
   - Default
   - TransparentFX
