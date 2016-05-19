@@ -54,6 +54,11 @@ public class GameManager : MonoBehaviour {
                 new Vector2(-4.5f, 4.5f), //p3_spike
                 //pattern1 with wokky
                 new Vector2(-5f, 5f), //p1_wokky
+                //left saw
+                new Vector2(-6.5f,-6.5f), //left_saw
+                //right saw
+                new Vector2(6.3f, 6.3f) //right_saw
+
             };
 
         }
@@ -76,7 +81,7 @@ public class GameManager : MonoBehaviour {
                 //pattern1 
                 new Vector2(-5f, 5f), //p1
                 new Vector2(-5f, 5f), //p1
-                new Vector2(-5f, 5f), //p1
+                new Vector2(-5f, 5f) //p1
             };
         }
         else if (level == 4)
@@ -96,7 +101,7 @@ public class GameManager : MonoBehaviour {
                 new Vector2(-4.5f, 4.5f), //p3
                 new Vector2(-4.5f, 4.5f), //p3
                 //pattern1 
-                new Vector2(-5f, 5f), //p1
+                new Vector2(-5f, 5f) //p1
             };
         }
         else if (level == 5)
@@ -117,7 +122,7 @@ public class GameManager : MonoBehaviour {
                 new Vector2(-4.5f, 4.5f), //p3
                 new Vector2(-4.5f, 4.5f), //p3
                 new Vector2(-4.5f, 4.5f), //p3
-                new Vector2(-4.5f, 4.5f), //p3
+                new Vector2(-4.5f, 4.5f) //p3
 
             };
         }
@@ -138,14 +143,14 @@ public class GameManager : MonoBehaviour {
                 new Vector2(-4.5f, 4.5f), //p3
                 //pattern1 
                 new Vector2(-5f, 5f), //p1
-                new Vector2(-5f, 5f), //p1
+                new Vector2(-5f, 5f) //p1
 
             };
         }
         return new Vector2[]{new Vector2(-2.88f, 2.88f)};
     }
     public void initGame() {
-        SceneManager.LoadScene(8);
+        //SceneManager.LoadScene(8);
         isGrounded = false;
         totalScore = 0;
         blockSpeed = 1.5f;

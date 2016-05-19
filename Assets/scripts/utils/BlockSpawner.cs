@@ -36,8 +36,10 @@ public class BlockSpawner : MonoBehaviour {
         timer -= Time.deltaTime;
         if (timer <= 0 && blockCount<=totalNumOfBlocks && !GameManager.instance.isGrounded && rb2d.velocity.y<-7){
             //get a random pattern
-            patternNumber = Random.Range(0, blocks.Length-1);
-//            print(blocks.Length + "----Pat:" + patternNumber);
+            patternNumber = Random.Range(0, blocks.Length);
+            print(blocks.Length - 1 + ": we picked: " + patternNumber);
+
+            //            print(blocks.Length + "----Pat:" + patternNumber);
             //print(blockPositions[patternNumber].x);
             //print(patternNumber + "-" + GameManager.instance.blockPositions.Length);
             float newX = Random.Range(blockPositions[patternNumber].x,
@@ -51,7 +53,7 @@ public class BlockSpawner : MonoBehaviour {
 
     IEnumerator createPlatform()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(3);
         if (BlockSpawner.levelEnded == false)
         {
             Instantiate(levelEndPlatform, transform.position, transform.rotation);
