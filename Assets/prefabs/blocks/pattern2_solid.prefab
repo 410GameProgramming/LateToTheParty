@@ -41,7 +41,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 458308}
-  - 114: {fileID: 11494400}
   m_Layer: 8
   m_Name: pattern2_solid
   m_TagString: Ground
@@ -232,17 +231,6 @@ MonoBehaviour:
   blockHealth: 1000
   crumble: {fileID: 19808842}
   destroy: {fileID: 19881006, guid: ace58439e15589d4bb78b11e67a4a87b, type: 2}
---- !u!114 &11494400
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 120930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a52e1a0c1db6144d8ce87c13f9af834, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!198 &19808842
 ParticleSystem:
   m_ObjectHideFlags: 1

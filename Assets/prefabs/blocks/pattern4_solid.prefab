@@ -40,7 +40,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 465980}
-  - 114: {fileID: 11431894}
   m_Layer: 8
   m_Name: pattern4_solid
   m_TagString: Ground
@@ -276,17 +275,6 @@ BoxCollider2D:
   m_Offset: {x: 0.0046761036, y: 0.002338171}
   serializedVersion: 2
   m_Size: {x: 3.1697326, y: 0.527709}
---- !u!114 &11431894
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 117154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a52e1a0c1db6144d8ce87c13f9af834, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11446780
 MonoBehaviour:
   m_ObjectHideFlags: 1

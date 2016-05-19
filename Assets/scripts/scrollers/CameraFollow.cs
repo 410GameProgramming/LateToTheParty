@@ -6,8 +6,8 @@ public class CameraFollow : MonoBehaviour {
     private Vector2 velocity;
     public float smoothTimeY;
     public float smoothTimeX;
-    public GameObject player;
-    public GameObject wall;
+    private GameObject player;
+    private GameObject wall;
 
     public Vector3 minCameraPos;
     public Vector3 maxCameraPos;
@@ -17,6 +17,7 @@ public class CameraFollow : MonoBehaviour {
 
 	void Start () {
         wall = GameObject.FindGameObjectWithTag("Wall");
+        player = GameManager.instance.player;
     }
 
     
