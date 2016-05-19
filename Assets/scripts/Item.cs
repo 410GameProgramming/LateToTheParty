@@ -6,31 +6,65 @@ public class Item : MonoBehaviour {
     public Sprite healthSprite;
     public Sprite nukeSprite;
     public Sprite shieldSprite;
-
+    public float rad;
+   
     private string type;
     private PlayerController player;
     private int price;
+    public float dist;
+    private Transform target;
 
-	// Use this for initialization
-	void Start () {
-      
+    private bool display;
+
+
+    // Use this for initialization
+    void Start () {
+        transform.Find("price").gameObject.GetComponent<MeshRenderer>().enabled = !transform.Find("price").gameObject.GetComponent<MeshRenderer>().enabled;
+
+        target = GameManager.instance.player.transform;
+
         int rng = Random.Range(1, 4);
 	    if(rng == 1)
         {
             type = "health";
             
             GetComponent<SpriteRenderer>().sprite = healthSprite;
-        }else if(rng == 2)
+            transform.Find("price").gameObject.GetComponent<TextMesh>().text = "50";
+            price = 50;
+
+        }
+        else if(rng == 2)
         {
             type = "nuke";
             GetComponent<SpriteRenderer>().sprite = nukeSprite;
-        }else if(rng == 3)
+            transform.Find("price").gameObject.GetComponent<TextMesh>().text = "150";
+            price = 150;
+        }
+        else if(rng == 3)
         {
             type = "shield";
             GetComponent<SpriteRenderer>().sprite = shieldSprite;
+            transform.Find("price").gameObject.GetComponent<TextMesh>().text = "100";
+            price = 100;
         }
-        print(type);
+        
     }
+
+    void Update()
+    {
+        
+        dist = Vector3.Distance(transform.position, target.transform.position);
+        if (dist < rad)
+        {
+            display = true;
+        }else if (dist >= rad)
+        {
+            display = false;
+        }
+        transform.Find("price").gameObject.GetComponent<MeshRenderer>().enabled = display;
+
+    }
+
 
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -39,7 +73,9 @@ public class Item : MonoBehaviour {
         {
             player = GameManager.instance.player.GetComponent<PlayerController>();
             //player.pickup(type);
+            GameManager.instance.totalScore -= price;
+            Destroy(gameObject);
         }
-
+        
     }
 }
