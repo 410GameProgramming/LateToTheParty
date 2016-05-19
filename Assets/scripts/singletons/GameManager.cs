@@ -4,7 +4,6 @@
  */
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
     public static GameManager instance = null;
@@ -13,6 +12,7 @@ public class GameManager : MonoBehaviour {
     public int totalScore;
     public float blockSpeed;
     public GameObject player;
+    public GameObject canvas;
     public int currentLevel;
     public Vector2[][] blockPositions;
     void Awake () {

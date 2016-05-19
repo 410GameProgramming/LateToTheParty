@@ -13,7 +13,7 @@ public class Item : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-      
+        player = GameManager.instance.player.GetComponent<PlayerController>();
         int rng = Random.Range(1, 4);
 	    if(rng == 1)
         {
@@ -37,8 +37,8 @@ public class Item : MonoBehaviour {
 
         if (col.tag == "Player")
         {
-            player = GameManager.instance.player.GetComponent<PlayerController>();
-            //player.pickup(type);
+            player.DoPickup(type);
+            Destroy(gameObject);
         }
 
     }

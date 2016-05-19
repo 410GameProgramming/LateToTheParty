@@ -11,24 +11,32 @@ public class PlayerController : MonoBehaviour {
     public Gun.Weapon weapon;
     public Rigidbody2D rb2d;
     public Stat playerHealth;
+    public Stat playerShield;
+    public int nukeCount;
     public Transform groundCheck;
     public AudioClip hurtSound;
     public AudioClip jumpSound;
     public AudioClip landSound;
 
     //private variables 
+    private GameObject[] blocks;
+    private GameObject[] enemies;
+    private Nuke nuke;
     private SpriteRenderer sprite;
     private Animator anim;
     private bool damaged = false;
+    private bool undamaged = true;
     private float maxVelocityY = 20.0f;
     private AudioSource source;
 
     private void Awake() {
         playerHealth.Initialize();
+        nukeCount = 1;
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         sprite = gameObject.GetComponent<SpriteRenderer>();
         anim = gameObject.GetComponent<Animator>();
         source = GetComponent<AudioSource>();
+        nuke = GameObject.Find("Nuke").GetComponent<Nuke>();
     }
 
     void Start () {
@@ -47,7 +55,14 @@ public class PlayerController : MonoBehaviour {
                 weapon = 0;
             }
         }
-
+        if (nukeCount > 0) {
+            nuke.ShowNuke();
+        } else {
+            nuke.HideNuke();
+        }
+        if (Input.GetKeyDown(KeyCode.N) && nukeCount > 0) {
+            LaunchNuke();
+        }
         if (Input.GetAxis("Horizontal") < -0.1f){
             transform.localScale = new Vector3(-1, 1, 1);
         }
@@ -108,13 +123,13 @@ public class PlayerController : MonoBehaviour {
                 rb2d.AddForce((Vector2.up * 350));
                 playerHealth.CurrentVal -= 10;
                 sprite.color = Color.red;
-            }else if(col.tag == "EnemyProjectile")
-            {
+            } else if (col.tag == "EnemyProjectile") {
                 source.PlayOneShot(hurtSound);
                 playerHealth.CurrentVal -= 5;
                 sprite.color = Color.red;
             }
             damaged = true;
+            undamaged = false;
             source.PlayOneShot(landSound);
             StartCoroutine(Invulnerability());
         }
@@ -136,6 +151,30 @@ public class PlayerController : MonoBehaviour {
             StartCoroutine(Invulnerability());
         }
     }*/
+
+    private void LaunchNuke() {
+        blocks = GameObject.FindGameObjectsWithTag("Ground");
+        enemies = GameObject.FindGameObjectsWithTag("Attack");
+        foreach (GameObject block in blocks) {
+            Destroy(block);
+        }
+        foreach (GameObject enemy in enemies) {
+            Destroy(enemy);
+        }
+        --nukeCount;
+    }
+
+    public void DoPickup(string type) {
+        if (type.Equals("health")) {
+            playerHealth.CurrentVal = playerHealth.MaxVal;
+        }
+        else if (type.Equals("nuke")) {
+            ++nukeCount;
+        }
+        else if (type.Equals("shield")) {
+            //playerShield.CurrentVal = playerShield.MaxVal;
+        }
+    }
 
     IEnumerator Invulnerability() {
         yield return new WaitForSeconds(1.3f);
