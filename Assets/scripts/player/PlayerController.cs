@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
-    //public variables
     public float speed = 50f;
     public float jumpPower = 200f;
     public bool grounded;
@@ -18,8 +17,8 @@ public class PlayerController : MonoBehaviour {
     public AudioClip hurtSound;
     public AudioClip jumpSound;
     public AudioClip landSound;
+    public WeaponImage weaponImage;
 
-    //private variables 
     private GameObject[] blocks;
     private GameObject[] enemies;
     private Nuke nuke;
@@ -45,7 +44,8 @@ public class PlayerController : MonoBehaviour {
         playerHealth.CurrentVal = GameManager.instance.currentHealth;
         playerShield.CurrentVal = GameManager.instance.shield;
         nukeCount = GameManager.instance.nukeCount;
-	}
+        weaponImage = GameObject.Find("Weapon").GetComponent<WeaponImage>();
+    }
 	
 	void Update () {
         CheckIfGameOver();
@@ -54,8 +54,10 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetButtonDown("Fire2")) {
             if ((int)weapon < 4) {
                 ++weapon;
+                weaponImage.SetImage((int)weapon);
             } else {
                 weapon = 0;
+                weaponImage.SetImage((int)weapon);
             }
         }
         if (nukeCount > 0) {
@@ -148,23 +150,6 @@ public class PlayerController : MonoBehaviour {
             StartCoroutine(Invulnerability());
         }
     }
-
-    /*void OnTriggerStay2D(Collider2D col) {
-        if (!damaged) {
-            if (col.tag == "Attack") {
-                if (System.Math.Abs(rb2d.velocity.y) > 0.0f) {
-                    Vector3 newVelocity = rb2d.velocity.normalized;
-                    newVelocity *= 0.0f;
-                    rb2d.velocity = newVelocity;
-                }
-                rb2d.AddForce((Vector2.up * 350));
-                playerHealth.CurrentVal -= 10;
-                sprite.color = Color.red;
-            }
-            damaged = true;
-            StartCoroutine(Invulnerability());
-        }
-    }*/
 
     private void LaunchNuke() {
         blocks = GameObject.FindGameObjectsWithTag("Ground");
