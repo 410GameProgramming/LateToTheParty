@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour {
     public Vector2[][] blockPositions;
     public float currentHealth;
     public float shield = 0.0f;
+    public int nukeCount;
 
     void Awake () {
         //Check if instance already exists
@@ -36,6 +37,7 @@ public class GameManager : MonoBehaviour {
         //Sets this to not be destroyed when reloading scene
         DontDestroyOnLoad(gameObject);
         currentHealth = 100.0f;
+        nukeCount = 1;
     }
 
     public Vector2[] getBlockPositions(int level)

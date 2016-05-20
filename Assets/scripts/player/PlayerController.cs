@@ -32,7 +32,6 @@ public class PlayerController : MonoBehaviour {
     private void Awake() {
         playerHealth.Initialize();
         playerShield.Initialize();
-        nukeCount = 1;
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         sprite = gameObject.GetComponent<SpriteRenderer>();
         anim = gameObject.GetComponent<Animator>();
@@ -44,6 +43,7 @@ public class PlayerController : MonoBehaviour {
         weapon = Gun.Weapon.Handgun;
         playerHealth.CurrentVal = GameManager.instance.currentHealth;
         playerShield.CurrentVal = GameManager.instance.shield;
+        nukeCount = GameManager.instance.nukeCount;
 	}
 	
 	void Update () {
