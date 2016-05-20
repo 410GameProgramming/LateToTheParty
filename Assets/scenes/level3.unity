@@ -308,7 +308,7 @@ MonoBehaviour:
   - {fileID: 110942, guid: bd9dcc9d592e2ac49ae2f0474f96bd1d, type: 2}
   delayTimer: 0.3
   level: 3
-  levelEndPlatform: {fileID: 146744, guid: edcf4779e0552e34b882da78e6088bb3, type: 2}
+  levelEndPlatform: {fileID: 132410, guid: c94c3398ba5dd49d59d22a455212e5e3, type: 2}
   totalNumOfBlocks: 100
 --- !u!4 &372518182
 Transform:
