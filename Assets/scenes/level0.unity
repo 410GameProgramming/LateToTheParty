@@ -2957,11 +2957,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-<<<<<<< HEAD
-  m_RootOrder: 3
-=======
   m_RootOrder: 4
->>>>>>> 2144effbda99c2328e27c378e33338bf2016aac5
 --- !u!4 &984434471 stripped
 Transform:
   m_PrefabParentObject: {fileID: 465980, guid: dbc850d77ce5b8349a5254194e69c0c3, type: 2}

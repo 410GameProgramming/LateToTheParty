@@ -70,13 +70,8 @@ public class Item : MonoBehaviour {
 
         if (col.tag == "Player")
         {
-<<<<<<< HEAD
             player.DoPickup(type);
-=======
-            player = GameManager.instance.player.GetComponent<PlayerController>();
-            //player.pickup(type);
             GameManager.instance.totalScore -= price;
->>>>>>> 2144effbda99c2328e27c378e33338bf2016aac5
             Destroy(gameObject);
         }
         
