@@ -538,12 +538,12 @@ MonoBehaviour:
   weapon: 0
   rb2d: {fileID: 598156128}
   playerHealth:
-    health: {fileID: 0}
+    health: {fileID: 1197608230}
     maxVal: 100
     currentVal: 100
   playerShield:
-    health: {fileID: 0}
-    maxVal: 0
+    health: {fileID: 1197608229}
+    maxVal: 4
     currentVal: 0
   nukeCount: 0
   groundCheck: {fileID: 2111408795}
@@ -862,6 +862,18 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b440c230efc7f54eba52dc52b8b3475, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1197608229 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11416034, guid: 3b440c230efc7f54eba52dc52b8b3475,
+    type: 2}
+  m_PrefabInternal: {fileID: 1197608228}
+  m_Script: {fileID: 11500000, guid: 6e07b43a6a7adb647a3b9c768c8bde88, type: 3}
+--- !u!114 &1197608230 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11417858, guid: 3b440c230efc7f54eba52dc52b8b3475,
+    type: 2}
+  m_PrefabInternal: {fileID: 1197608228}
+  m_Script: {fileID: 11500000, guid: 6e07b43a6a7adb647a3b9c768c8bde88, type: 3}
 --- !u!1 &1255816411
 GameObject:
   m_ObjectHideFlags: 0

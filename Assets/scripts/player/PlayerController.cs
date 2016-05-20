@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour {
 
     private void Awake() {
         playerHealth.Initialize();
+        playerShield.Initialize();
         nukeCount = 1;
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         sprite = gameObject.GetComponent<SpriteRenderer>();
@@ -42,6 +43,7 @@ public class PlayerController : MonoBehaviour {
     void Start () {
         weapon = Gun.Weapon.Handgun;
         playerHealth.CurrentVal = GameManager.instance.currentHealth;
+        playerShield.CurrentVal = GameManager.instance.shield;
 	}
 	
 	void Update () {
@@ -123,11 +125,20 @@ public class PlayerController : MonoBehaviour {
                     rb2d.velocity = newVelocity;
                 }
                 rb2d.AddForce((Vector2.up * 350));
-                playerHealth.CurrentVal -= 10;
+                if (playerShield.CurrentVal > 0) {
+                    playerShield.CurrentVal -= 1;
+                }
+                else {
+                    playerHealth.CurrentVal -= 10;
+                }
                 sprite.color = Color.red;
             } else if (col.tag == "EnemyProjectile") {
                 source.PlayOneShot(hurtSound);
-                playerHealth.CurrentVal -= 5;
+                if (playerShield.CurrentVal > 0) {
+                    playerShield.CurrentVal -= 1;
+                } else {
+                    playerHealth.CurrentVal -= 5;
+                }
                 sprite.color = Color.red;
             }
             damaged = true;
@@ -175,7 +186,8 @@ public class PlayerController : MonoBehaviour {
             ++nukeCount;
         }
         else if (type.Equals("shield")) {
-            //playerShield.CurrentVal = playerShield.MaxVal;
+            playerShield.CurrentVal = playerShield.MaxVal;
+            GameManager.instance.shield = playerShield.CurrentVal;
         }
     }
 

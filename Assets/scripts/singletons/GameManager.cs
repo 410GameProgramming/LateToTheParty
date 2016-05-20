@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour {
     public int currentLevel;
     public Vector2[][] blockPositions;
     public float currentHealth;
+    public float shield = 0.0f;
 
     void Awake () {
         //Check if instance already exists
