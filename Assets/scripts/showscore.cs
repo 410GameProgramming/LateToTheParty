@@ -19,8 +19,8 @@ public class Showscore : MonoBehaviour {
 	}
 
     IEnumerator LoadLevel() {
-        yield return new WaitForSeconds(2);
         transform.Find("scoreDisplay").gameObject.GetComponent<TextMesh>().text = GameManager.instance.totalScore.ToString();
+        yield return new WaitForSeconds(2);
         SceneManager.LoadScene("level0");
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class DiveIn : MonoBehaviour {
 
     void Update() {
-        if (transform.position.y < -12) {
+        if (transform.position.y < -7) {
             StartCoroutine(LoadLevel());
         }
     }

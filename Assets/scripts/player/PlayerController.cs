@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
@@ -62,7 +63,7 @@ public class PlayerController : MonoBehaviour {
         } else {
             nuke.HideNuke();
         }
-        if (Input.GetKeyDown(KeyCode.N) && nukeCount > 0) {
+        if (Input.GetKeyDown(KeyCode.N) && nukeCount > 0 && SceneManager.GetActiveScene().name != "level0") {
             LaunchNuke();
         }
         if (Input.GetAxis("Horizontal") < -0.1f){
