@@ -70,9 +70,12 @@ public class Item : MonoBehaviour {
 
         if (col.tag == "Player")
         {
-            player.DoPickup(type);
-            GameManager.instance.totalScore -= price;
-            Destroy(gameObject);
+            if (price <= GameManager.instance.totalScore)
+            {
+                player.DoPickup(type);
+                GameManager.instance.totalScore -= price;
+                Destroy(gameObject);
+            }
         }
         
     }

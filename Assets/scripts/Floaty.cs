@@ -14,6 +14,8 @@ public class Floaty : MonoBehaviour {
     public float projectileSpeed;
     public float projectileTimer;
 
+    public ParticleSystem deathFX;
+
     public GameObject projectile;
     private Transform target;
     public Transform projectileSpawn;
@@ -35,6 +37,7 @@ public class Floaty : MonoBehaviour {
         if (health <= 0)
         {
             GameManager.instance.totalScore += 20;
+            Instantiate(deathFX, transform.position, transform.rotation);
             Destroy(gameObject);
         }
 
