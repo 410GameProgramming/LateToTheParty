@@ -404,6 +404,14 @@ MonoBehaviour:
   - {fileID: 130964, guid: 194d1121387112d44a501cad0f1a1868, type: 2}
   - {fileID: 104908, guid: 0b38c31d7563d0f41be0b827a7730136, type: 2}
   - {fileID: 109038, guid: f1b9280642cd0e149bce720537663b1a, type: 2}
+  - {fileID: 112584, guid: 2cb7bbb710ad31f418ce3acc0d15290e, type: 2}
+  - {fileID: 112584, guid: 2cb7bbb710ad31f418ce3acc0d15290e, type: 2}
+  - {fileID: 105188, guid: 7aa11415357b0b941bc5cec15b809dc0, type: 2}
+  - {fileID: 193014, guid: 745893d99418bd545be2eacc263c4644, type: 2}
+  - {fileID: 177326, guid: 40097136f3758ed45aa5127b4a880f20, type: 2}
+  - {fileID: 119836, guid: 4a2df1518e5d57e40ac4c57840cff1cf, type: 2}
+  - {fileID: 186578, guid: 94e2945ebd6a90746ad5525308fb0792, type: 2}
+  - {fileID: 173274, guid: c89831523bbd3b8478690527ea502bb0, type: 2}
   delayTimer: 0.3
   level: 2
   levelEndPlatform: {fileID: 146744, guid: edcf4779e0552e34b882da78e6088bb3, type: 2}
