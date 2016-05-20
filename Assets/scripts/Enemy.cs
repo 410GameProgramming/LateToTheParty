@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour {
     private Rigidbody2D rb2d;
     private Animator anim;
     //private Transform frontCheck;
-    //private AudioSource source;
+    private AudioSource source;
     private Text scoreText;
 
     
@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        //source = gameObject.GetComponent<AudioSource>();
+        source = gameObject.GetComponent<AudioSource>();
         rb2d = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();      
         //scoreText = GameObject.Find("scoreText").GetComponent<Text>();
@@ -76,6 +76,7 @@ public class Enemy : MonoBehaviour {
 
     public void Hit()
     {
+        source.PlayOneShot(hitSound);
         Instantiate(deathFX, transform.position, transform.rotation);        
         Destroy(gameObject);
         GameManager.instance.totalScore += 10;

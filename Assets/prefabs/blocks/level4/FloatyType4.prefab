@@ -177,6 +177,7 @@ MonoBehaviour:
   fireFrequency: 3
   projectileSpeed: 5
   projectileTimer: 3
+  deathFX: {fileID: 19885418, guid: fbd1fe493cb28fa45a53bb750a8023c9, type: 2}
   projectile: {fileID: 152966, guid: 714cf57749c1bc24aa12324a2befdc6e, type: 2}
   projectileSpawn: {fileID: 458306}
 --- !u!212 &21279846
