@@ -3329,7 +3329,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a47df8eacfc1fb940bf35f6fba3aee9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  txtLevel: {fileID: 0}
 --- !u!114 &1129290317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3343,7 +3342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 100
-  jumpPower: 300
+  jumpPower: 400
   grounded: 0
   maxSpeed: 3
   weapon: 0
@@ -4144,6 +4143,66 @@ Prefab:
     - target: {fileID: 22403074, guid: 3b440c230efc7f54eba52dc52b8b3475, type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22434930, guid: 3b440c230efc7f54eba52dc52b8b3475, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000007867813
+      objectReference: {fileID: 0}
+    - target: {fileID: 22434930, guid: 3b440c230efc7f54eba52dc52b8b3475, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 97.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 22434930, guid: 3b440c230efc7f54eba52dc52b8b3475, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -18
+      objectReference: {fileID: 0}
+    - target: {fileID: 22434930, guid: 3b440c230efc7f54eba52dc52b8b3475, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 132
+      objectReference: {fileID: 0}
+    - target: {fileID: 22452706, guid: 3b440c230efc7f54eba52dc52b8b3475, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 132
+      objectReference: {fileID: 0}
+    - target: {fileID: 22452706, guid: 3b440c230efc7f54eba52dc52b8b3475, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000006198883
+      objectReference: {fileID: 0}
+    - target: {fileID: 22452706, guid: 3b440c230efc7f54eba52dc52b8b3475, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 97.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 22434932, guid: 3b440c230efc7f54eba52dc52b8b3475, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 132
+      objectReference: {fileID: 0}
+    - target: {fileID: 22434932, guid: 3b440c230efc7f54eba52dc52b8b3475, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 22434932, guid: 3b440c230efc7f54eba52dc52b8b3475, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 93.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 22434932, guid: 3b440c230efc7f54eba52dc52b8b3475, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -19
+      objectReference: {fileID: 0}
+    - target: {fileID: 22416628, guid: 3b440c230efc7f54eba52dc52b8b3475, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000024318695
+      objectReference: {fileID: 0}
+    - target: {fileID: 22416628, guid: 3b440c230efc7f54eba52dc52b8b3475, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 93.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 22416628, guid: 3b440c230efc7f54eba52dc52b8b3475, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22416628, guid: 3b440c230efc7f54eba52dc52b8b3475, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 132
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b440c230efc7f54eba52dc52b8b3475, type: 2}
