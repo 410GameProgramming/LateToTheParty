@@ -308,6 +308,10 @@ MonoBehaviour:
   - {fileID: 109038, guid: 88832d83ffdc891488da26fdd45d3bc6, type: 2}
   - {fileID: 168080, guid: 1935f383249313f439796a6fb924acb1, type: 2}
   - {fileID: 168080, guid: 1935f383249313f439796a6fb924acb1, type: 2}
+  - {fileID: 102752, guid: 703c1d0a3df5d0846a63ce2321bb280d, type: 2}
+  - {fileID: 119656, guid: 19546eec4c27c484faff986b62555434, type: 2}
+  - {fileID: 182124, guid: a4fe09a6823dbd443b7e39eecc743dea, type: 2}
+  - {fileID: 165494, guid: f6a945b11913be947901a188570e46ee, type: 2}
   delayTimer: 0.3
   level: 1
   levelEndPlatform: {fileID: 146744, guid: edcf4779e0552e34b882da78e6088bb3, type: 2}
@@ -373,7 +377,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22403074, guid: 3b440c230efc7f54eba52dc52b8b3475, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 22403074, guid: 3b440c230efc7f54eba52dc52b8b3475, type: 2}
       propertyPath: m_AnchoredPosition.x

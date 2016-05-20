@@ -57,7 +57,12 @@ public class GameManager : MonoBehaviour {
                 //left saw
                 new Vector2(-6.5f,-6.5f), //left_saw
                 //right saw
-                new Vector2(6.3f, 6.3f) //right_saw
+                new Vector2(6.3f, 6.3f), //right_saw
+                new Vector2(-6.3f, -6.3f), //left hazzard still
+                new Vector2(6.3f, 6.3f), //right hazzard still
+                new Vector2(-6.3f, -6.3f), //left hazzard moving
+                new Vector2(6.3f, 6.3f) //right hazzard moving
+
 
             };
 
