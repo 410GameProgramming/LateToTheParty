@@ -124,7 +124,7 @@ public class GameManager : MonoBehaviour {
                 new Vector2(-6.3f, -6.3f), //left hazzard moving
                 new Vector2(-6.3f, -6.3f), //left hazzard moving
                 new Vector2(6.3f, 6.3f), //right hazzard still
-                new Vector2(6.3f, 6.3f), //right hazzard still
+                new Vector2(6.3f, 6.3f) //right hazzard still
             };
         }
         else if (level == 4)
@@ -144,7 +144,21 @@ public class GameManager : MonoBehaviour {
                 new Vector2(-4.5f, 4.5f), //p3
                 new Vector2(-4.5f, 4.5f), //p3
                 //pattern1 
-                new Vector2(-5f, 5f) //p1
+                new Vector2(-5f, 5f), //p1
+
+                //crusher
+                new Vector2(0f,0f), //left_saw
+
+                //left saw
+                new Vector2(-6.5f,-6.5f), //left_saw
+                //right saw
+                new Vector2(6.3f, 6.3f), //right_saw
+
+                new Vector2(-6.3f, -6.3f), //left hazzard moving
+                new Vector2(-6.3f, -6.3f), //left hazzard moving
+                new Vector2(6.3f, 6.3f), //right hazzard still
+                new Vector2(6.3f, 6.3f) //right hazzard still
+
             };
         }
         else if (level == 5)
@@ -165,7 +179,20 @@ public class GameManager : MonoBehaviour {
                 new Vector2(-4.5f, 4.5f), //p3
                 new Vector2(-4.5f, 4.5f), //p3
                 new Vector2(-4.5f, 4.5f), //p3
-                new Vector2(-4.5f, 4.5f) //p3
+                new Vector2(-4.5f, 4.5f), //p3
+
+                //crusher
+                new Vector2(0f,0f), //left_saw
+
+                //left saw
+                new Vector2(-6.5f,-6.5f), //left_saw
+                //right saw
+                new Vector2(6.3f, 6.3f), //right_saw
+
+                new Vector2(-6.3f, -6.3f), //left hazzard moving
+                new Vector2(-6.3f, -6.3f), //left hazzard moving
+                new Vector2(6.3f, 6.3f), //right hazzard still
+                new Vector2(6.3f, 6.3f) //right hazzard still
 
             };
         }
