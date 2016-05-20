@@ -11,10 +11,13 @@ public class GameManager : MonoBehaviour {
     public bool isGrounded;
     public int totalScore;
     public float blockSpeed;
+    public PlayerController playerController;
     public GameObject player;
     public GameObject canvas;
     public int currentLevel;
     public Vector2[][] blockPositions;
+    public float currentHealth;
+
     void Awake () {
         //Check if instance already exists
         if (instance == null){
@@ -31,8 +34,8 @@ public class GameManager : MonoBehaviour {
 
         //Sets this to not be destroyed when reloading scene
         DontDestroyOnLoad(gameObject);
+        currentHealth = 100.0f;
     }
-
 
     public Vector2[] getBlockPositions(int level)
     {

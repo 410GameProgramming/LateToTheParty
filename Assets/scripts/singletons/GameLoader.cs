@@ -8,16 +8,14 @@ using UnityEngine;
 public class GameLoader : MonoBehaviour {
     public GameObject gameManager;
 	void Awake () {
-        if (GameManager.instance == null){
+        if (GameManager.instance == null) {
             //Instantiate gameManager prefab
             Instantiate(gameManager);
         }
 	}
 
-    void OnLevelWasLoaded(int level)
-    {
+    void OnLevelWasLoaded(int level) {
         GameManager.instance.initAgain();
         //print("Level: " + level);
     }
-	
 }

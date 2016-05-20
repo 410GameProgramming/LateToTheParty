@@ -40,8 +40,8 @@ public class PlayerController : MonoBehaviour {
     }
 
     void Start () {
-        playerHealth.MaxVal = 100;
         weapon = Gun.Weapon.Handgun;
+        playerHealth.CurrentVal = GameManager.instance.currentHealth;
 	}
 	
 	void Update () {
@@ -75,9 +75,11 @@ public class PlayerController : MonoBehaviour {
         }
         if (Input.GetKeyDown(KeyCode.Q)) {
             playerHealth.CurrentVal -= 10;
+            GameManager.instance.currentHealth = playerHealth.CurrentVal;
         }
         if (Input.GetKeyDown(KeyCode.W)) {
             playerHealth.CurrentVal += 10;
+            GameManager.instance.currentHealth = playerHealth.CurrentVal;
         }
     }
 
@@ -167,6 +169,7 @@ public class PlayerController : MonoBehaviour {
     public void DoPickup(string type) {
         if (type.Equals("health")) {
             playerHealth.CurrentVal = playerHealth.MaxVal;
+            GameManager.instance.currentHealth = playerHealth.MaxVal;
         }
         else if (type.Equals("nuke")) {
             ++nukeCount;

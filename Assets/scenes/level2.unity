@@ -538,7 +538,7 @@ MonoBehaviour:
   weapon: 0
   rb2d: {fileID: 598156128}
   playerHealth:
-    health: {fileID: 863203531}
+    health: {fileID: 0}
     maxVal: 100
     currentVal: 100
   playerShield:
@@ -720,7 +720,67 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1001 &863203530
+--- !u!1 &978872740
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 978872741}
+  - 114: {fileID: 978872742}
+  - 61: {fileID: 978872743}
+  m_Layer: 0
+  m_Name: left_wall
+  m_TagString: Wall
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &978872741
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 978872740}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12, y: 5, z: -8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1565079998}
+  - {fileID: 2133831138}
+  - {fileID: 1255816412}
+  - {fileID: 345972715}
+  m_Father: {fileID: 1896334263}
+  m_RootOrder: 0
+--- !u!114 &978872742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 978872740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16c9fc44fdbf36e47ba4693382d40205, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wall: {fileID: 0}
+  tileSizeZ: 1
+--- !u!61 &978872743
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 978872740}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 5f78bec3e17763a49ba4b2879a189a5a, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 4.859612, y: -13.122993}
+  serializedVersion: 2
+  m_Size: {x: 0.89293575, y: 53.00422}
+--- !u!1001 &1197608228
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -802,72 +862,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3b440c230efc7f54eba52dc52b8b3475, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &863203531 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11416034, guid: 3b440c230efc7f54eba52dc52b8b3475,
-    type: 2}
-  m_PrefabInternal: {fileID: 863203530}
-  m_Script: {fileID: 11500000, guid: 6e07b43a6a7adb647a3b9c768c8bde88, type: 3}
---- !u!1 &978872740
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 978872741}
-  - 114: {fileID: 978872742}
-  - 61: {fileID: 978872743}
-  m_Layer: 0
-  m_Name: left_wall
-  m_TagString: Wall
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &978872741
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 978872740}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12, y: 5, z: -8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1565079998}
-  - {fileID: 2133831138}
-  - {fileID: 1255816412}
-  - {fileID: 345972715}
-  m_Father: {fileID: 1896334263}
-  m_RootOrder: 0
---- !u!114 &978872742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 978872740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16c9fc44fdbf36e47ba4693382d40205, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wall: {fileID: 0}
-  tileSizeZ: 1
---- !u!61 &978872743
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 978872740}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 5f78bec3e17763a49ba4b2879a189a5a, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 4.859612, y: -13.122993}
-  serializedVersion: 2
-  m_Size: {x: 0.89293575, y: 53.00422}
 --- !u!1 &1255816411
 GameObject:
   m_ObjectHideFlags: 0
