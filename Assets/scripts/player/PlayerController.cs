@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour {
 
     //public variables
     public float speed = 50f;
-    public float jumpPower = 150f;
+    public float jumpPower = 200f;
     public bool grounded;
     public float maxSpeed = 3;
     public Gun.Weapon weapon;

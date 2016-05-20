@@ -464,7 +464,7 @@ MonoBehaviour:
   delayTimer: 0.3
   level: 1
   levelEndPlatform: {fileID: 132410, guid: c94c3398ba5dd49d59d22a455212e5e3, type: 2}
-  totalNumOfBlocks: 100
+  totalNumOfBlocks: 10
 --- !u!4 &372518182
 Transform:
   m_ObjectHideFlags: 0
