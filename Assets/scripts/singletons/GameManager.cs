@@ -98,6 +98,35 @@ public class GameManager : MonoBehaviour {
 
             };
         }
+        else if (level == 3)
+        {
+            return new Vector2[]{
+                //pattern1 
+                new Vector2(-5f, 5f), //p1
+                //pattern3
+                new Vector2(-4.5f, 4.5f), //p3
+                //pattern2
+                new Vector2(-5.5f, 5.5f), //p2
+                //pattern1 
+                new Vector2(-5f, 5f), //p1
+                new Vector2(-5f, 5f), //p1
+                new Vector2(-5f, 5f), //p1
+                //pattern3
+                new Vector2(-4.5f, 4.5f), //p3
+                //pattern1 
+                new Vector2(-5f, 5f), //p1
+                new Vector2(-5f, 5f), //p1
+                //left saw
+                new Vector2(-6.5f,-6.5f), //left_saw
+                //right saw
+                new Vector2(6.3f, 6.3f), //right_saw
+
+                new Vector2(-6.3f, -6.3f), //left hazzard moving
+                new Vector2(-6.3f, -6.3f), //left hazzard moving
+                new Vector2(6.3f, 6.3f), //right hazzard still
+                new Vector2(6.3f, 6.3f), //right hazzard still
+            };
+        }
         else if (level == 4)
         {
             return new Vector2[]{
@@ -140,27 +169,7 @@ public class GameManager : MonoBehaviour {
 
             };
         }
-        else if (level == 3)
-        {
-            return new Vector2[]{
-                //pattern1 
-                new Vector2(-5f, 5f), //p1
-                //pattern3
-                new Vector2(-4.5f, 4.5f), //p3
-                //pattern2
-                new Vector2(-5.5f, 5.5f), //p2
-                //pattern1 
-                new Vector2(-5f, 5f), //p1
-                new Vector2(-5f, 5f), //p1
-                new Vector2(-5f, 5f), //p1
-                //pattern3
-                new Vector2(-4.5f, 4.5f), //p3
-                //pattern1 
-                new Vector2(-5f, 5f), //p1
-                new Vector2(-5f, 5f) //p1
 
-            };
-        }
         return new Vector2[]{new Vector2(-2.88f, 2.88f)};
     }
     public void initGame() {

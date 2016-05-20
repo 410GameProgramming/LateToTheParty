@@ -300,6 +300,12 @@ MonoBehaviour:
   - {fileID: 171762, guid: 92534c4285247ee46bcfa369f58455ad, type: 2}
   - {fileID: 130036, guid: 62e43ebdb31195043974da0321b3f088, type: 2}
   - {fileID: 104908, guid: efd7aa2f28a5f834883bd9086ae1bff3, type: 2}
+  - {fileID: 123462, guid: 3ffd02fee85155b4ea8869d5acebb15c, type: 2}
+  - {fileID: 123462, guid: 3ffd02fee85155b4ea8869d5acebb15c, type: 2}
+  - {fileID: 104816, guid: 48df28b8452482e4b9fcefb8b540543d, type: 2}
+  - {fileID: 154826, guid: ac884e579d9af5f4c806e09e1f0f96c1, type: 2}
+  - {fileID: 100514, guid: 8b1c09848165ce94287e1afe8decf66d, type: 2}
+  - {fileID: 110942, guid: bd9dcc9d592e2ac49ae2f0474f96bd1d, type: 2}
   delayTimer: 0.3
   level: 3
   levelEndPlatform: {fileID: 146744, guid: edcf4779e0552e34b882da78e6088bb3, type: 2}
