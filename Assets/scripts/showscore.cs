@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Showscore : MonoBehaviour {
+public class showscore : MonoBehaviour {
     public PlayerController playerController;
 
     void Start() {
