@@ -14,7 +14,7 @@ public class CameraFollow : MonoBehaviour {
 
     public bool bounds;
     public bool freezeX;
-
+    public bool keepPlayerAtTop = true;
 	void Start () {
         wall = GameObject.FindGameObjectWithTag("Wall");
         player = GameManager.instance.player;
@@ -24,10 +24,16 @@ public class CameraFollow : MonoBehaviour {
 
     void FixedUpdate(){
         //gradually changes a vector towards a desired goal over time
+
+        float diff = 0f;
+        if (keepPlayerAtTop)
+        {
+            diff = 7f;
+        }
         float posX = Mathf.SmoothDamp(transform.position.x, 
             GameManager.instance.player.transform.position.x, ref velocity.x, smoothTimeX);
         float posY = Mathf.SmoothDamp(transform.position.y,
-            GameManager.instance.player.transform.position.y, ref velocity.y, smoothTimeY);
+            GameManager.instance.player.transform.position.y-diff, ref velocity.y, smoothTimeY);
         transform.position = new Vector3(posX, posY, transform.position.z);
 
 

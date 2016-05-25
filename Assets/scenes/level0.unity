@@ -1442,6 +1442,7 @@ MonoBehaviour:
   maxCameraPos: {x: 10.5, y: 15, z: -10}
   bounds: 1
   freezeX: 0
+  keepPlayerAtTop: 0
 --- !u!114 &471760724
 MonoBehaviour:
   m_ObjectHideFlags: 0
