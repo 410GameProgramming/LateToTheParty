@@ -7,8 +7,7 @@ public class BulletDestroyer : MonoBehaviour {
     {
         if (col.tag == "Projectile")
         {
-            print("found");
-            Destroy(gameObject);
+            Destroy(col.gameObject);
         }
     }
 }

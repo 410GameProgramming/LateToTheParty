@@ -444,6 +444,7 @@ MonoBehaviour:
   hurtSound: {fileID: 8300000, guid: b031dcfae96a21f44b843171afe76f94, type: 3}
   jumpSound: {fileID: 8300000, guid: 887916a4f0d81c842b603188c1b278aa, type: 3}
   landSound: {fileID: 8300000, guid: d3370890d3337ee4aa2671c4c9f5ece8, type: 3}
+  weaponImage: {fileID: 0}
 --- !u!50 &598156128
 Rigidbody2D:
   serializedVersion: 2
@@ -834,6 +835,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!1001 &1293515243
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 436132, guid: 8c64c4acad9d27b48946a03b5dea9904, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 436132, guid: 8c64c4acad9d27b48946a03b5dea9904, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 436132, guid: 8c64c4acad9d27b48946a03b5dea9904, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 436132, guid: 8c64c4acad9d27b48946a03b5dea9904, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 436132, guid: 8c64c4acad9d27b48946a03b5dea9904, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 436132, guid: 8c64c4acad9d27b48946a03b5dea9904, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 436132, guid: 8c64c4acad9d27b48946a03b5dea9904, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 436132, guid: 8c64c4acad9d27b48946a03b5dea9904, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 8c64c4acad9d27b48946a03b5dea9904, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1379371881
 GameObject:
   m_ObjectHideFlags: 0
@@ -1523,6 +1566,7 @@ MonoBehaviour:
   maxCameraPos: {x: 0, y: 0, z: -10}
   bounds: 1
   freezeX: 1
+  keepPlayerAtTop: 1
 --- !u!81 &2147147404
 AudioListener:
   m_ObjectHideFlags: 0
