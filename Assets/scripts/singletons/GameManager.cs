@@ -210,7 +210,7 @@ public class GameManager : MonoBehaviour {
         isGrounded = false;
         totalScore = 0;
         blockSpeed = 1.5f;
-        currentLevel = 1;
+        currentLevel = 0;
         player = GameObject.FindGameObjectWithTag("Player");
         //initialize all the variables here
     }

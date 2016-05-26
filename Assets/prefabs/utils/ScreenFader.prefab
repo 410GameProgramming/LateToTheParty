@@ -11,7 +11,7 @@ GameObject:
   - 114: {fileID: 11434468}
   m_Layer: 0
   m_Name: ScreenFader
-  m_TagString: Untagged
+  m_TagString: ScreenFader
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,7 +39,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b880c9f9b221fc2498b790633fcebe84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeIn: 1
   fadeTime: 2
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
   fadeMaterial: {fileID: 2100000, guid: e642b458f4453e04ab7e2b711c58db98, type: 2}
