@@ -12,15 +12,11 @@ public class ScreenFader : MonoBehaviour
     private bool faded = false;
     private List<ScreenFadeControl> fadeControls = new List<ScreenFadeControl>();
 
-    public bool fadetoclear = false;
-    public bool fadetoblack = false;
-
     void SetFadersEnabled(bool value)
     {
         foreach (ScreenFadeControl fadeControl in fadeControls)
             fadeControl.enabled = value;         
     }
-
 
     void Start()
     {
@@ -29,12 +25,6 @@ public class ScreenFader : MonoBehaviour
         fadeMaterial.color = fadeColor;
         faded = true;
         StartCoroutine(FadeIn());
-
-        //tempFadeTime = fadeTime;
-        //fadeTime = 0.000000001f;
-        //StartCoroutine(FadeOut());
-        //fadeTime = tempFadeTime;
-
     }
 
     public IEnumerator FadeOut()
@@ -75,27 +65,6 @@ public class ScreenFader : MonoBehaviour
         faded = false;
         //SetFadersEnabled(false);
     }
-
-    public void Update()
-    {
-        if (fadetoclear){
-            StartCoroutine(FadeIn());
-        }
-        else if(fadetoblack){
-            StartCoroutine(FadeOut());
-        }
-
-        /*
-        if (lastFadeIn != fadeIn)
-        {
-            lastFadeIn = fadeIn;
-            StartCoroutine(DoFade());
-        }
-         */
-
-
-    }
-
     private void initFade()
     {
         // Clean up from last fade
@@ -114,27 +83,4 @@ public class ScreenFader : MonoBehaviour
         }
 
     }
-    /*public IEnumerator DoFade()
-    {
-        // Clean up from last fade
-        foreach (ScreenFadeControl fadeControl in fadeControls)
-        {
-            Destroy(fadeControl);
-        }
-        fadeControls.Clear();
-        
-        // Find all cameras and add fade material to them (initially disabled)
-        foreach (Camera c in Camera.allCameras)
-        {
-            var fadeControl = c.gameObject.AddComponent<ScreenFadeControl>();
-            fadeControl.fadeMaterial = fadeMaterial;
-            fadeControls.Add(fadeControl);
-        }
-
-        // Do fade
-        if (fadeIn)
-            yield return StartCoroutine(FadeIn());
-        else
-            yield return StartCoroutine(FadeOut());
-    }*/
 }
