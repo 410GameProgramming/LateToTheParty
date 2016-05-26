@@ -221,8 +221,11 @@ public class GameManager : MonoBehaviour {
         SceneManager.LoadScene("game_over");
         if(totalScore > PlayerPrefs.GetInt("firstScore"))
         {
+            PlayerPrefs.SetInt("thirdScore", PlayerPrefs.GetInt("secondScore"));
+            PlayerPrefs.SetInt("secondScore", PlayerPrefs.GetInt("firstScore"));
             PlayerPrefs.SetInt("firstScore", totalScore);
         }else if(totalScore > PlayerPrefs.GetInt("secondScore")){
+            PlayerPrefs.SetInt("thirdScore", PlayerPrefs.GetInt("secondScore"));
             PlayerPrefs.SetInt("secondScore", totalScore);
         }else if(totalScore > PlayerPrefs.GetInt("thirdScore"))
         {
