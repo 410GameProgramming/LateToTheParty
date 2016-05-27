@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour {
 
     private GameObject[] blocks;
     private GameObject[] enemies;
+    private GameObject shieldImage;
     private Nuke nuke;
     private SpriteRenderer sprite;
     private Animator anim;
@@ -43,6 +44,7 @@ public class PlayerController : MonoBehaviour {
         weapon = Gun.Weapon.Handgun;
         playerHealth.CurrentVal = GameManager.instance.currentHealth;
         playerShield.CurrentVal = GameManager.instance.shield;
+        shieldImage = GameObject.Find("PlayerShield");
         nukeCount = GameManager.instance.nukeCount;
         weaponImage = GameObject.Find("Weapon").GetComponent<WeaponImage>();
     }
@@ -85,6 +87,12 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.W)) {
             playerHealth.CurrentVal += 10;
             GameManager.instance.currentHealth = playerHealth.CurrentVal;
+        }
+        if (playerShield.CurrentVal > 0) {
+            shieldImage.SetActive(true);
+        }
+        else {
+            shieldImage.SetActive(false);
         }
     }
 
