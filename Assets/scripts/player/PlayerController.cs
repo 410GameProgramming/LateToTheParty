@@ -94,8 +94,7 @@ public class PlayerController : MonoBehaviour {
         }
         if (playerShield.CurrentVal > 0) {
             shieldImage.SetActive(true);
-        }
-        else {
+        } else {
             shieldImage.SetActive(false);
         }
     }
@@ -166,8 +165,7 @@ public class PlayerController : MonoBehaviour {
     private void LaunchNuke() {
         GameManager.instance.nukeEffect.SetActive(true);
         Color nukeColor = GameManager.instance.nukeEffect.GetComponent<Image>().color;
-        float nukeAlpha = GameManager.instance.nukeEffect.GetComponent<Image>().color.a;
-        StartCoroutine(FadeIn(nukeColor, nukeAlpha));
+        StartCoroutine(FadeIn(nukeColor));
         blocks = GameObject.FindGameObjectsWithTag("Ground");
         enemies = GameObject.FindGameObjectsWithTag("Attack");
         foreach (GameObject block in blocks) {
@@ -179,27 +177,24 @@ public class PlayerController : MonoBehaviour {
         --nukeCount;
     }
 
-    public IEnumerator FadeIn(Color nukeColor, float nukeAlpha) {
-        float ElapsedTime = 0.0f;
-        float TotalTime = 1.5f;
-        while (ElapsedTime < TotalTime) {
-            ElapsedTime += Time.deltaTime;
-            nukeAlpha += Time.deltaTime;
-            GameManager.instance.nukeEffect.GetComponent<Image>().color = Color.Lerp(nukeColor, new Color(1, 0, 0, 0.8f), nukeAlpha);
+    public IEnumerator FadeIn(Color nukeColor) {
+        float elapsedTime = 0.0f;
+        float totalTime = 1.5f;
+        while (elapsedTime < totalTime) {
+            elapsedTime += Time.deltaTime;
+            GameManager.instance.nukeEffect.GetComponent<Image>().color = Color.Lerp(nukeColor, new Color(1, 0, 0, 0.8f), elapsedTime);
             yield return null;
         }
         nukeColor = GameManager.instance.nukeEffect.GetComponent<Image>().color;
-        StartCoroutine(FadeOut(nukeColor, nukeAlpha));
+        StartCoroutine(FadeOut(nukeColor));
     }
 
-    public IEnumerator FadeOut(Color nukeColor, float nukeAlpha) {
-        nukeAlpha = 0;
-        float ElapsedTime = 0.0f;
-        float TotalTime = 1.5f;
-        while (ElapsedTime < TotalTime) {
-            ElapsedTime += Time.deltaTime;
-            nukeAlpha += Time.deltaTime;
-            GameManager.instance.nukeEffect.GetComponent<Image>().color = Color.Lerp(nukeColor, new Color(1, 0, 0, 0), nukeAlpha);
+    public IEnumerator FadeOut(Color nukeColor) {
+        float elapsedTime = 0.0f;
+        float totalTime = 1.5f;
+        while (elapsedTime < totalTime) {
+            elapsedTime += Time.deltaTime;
+            GameManager.instance.nukeEffect.GetComponent<Image>().color = Color.Lerp(nukeColor, new Color(1, 0, 0, 0), elapsedTime);
             yield return null;
         }
         GameManager.instance.nukeEffect.SetActive(false);
