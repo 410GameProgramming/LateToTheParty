@@ -13,6 +13,12 @@ public class LoadOnClick : MonoBehaviour {
 	public bool GodMode;
 	public bool HTP;
 
+	/*
+	void Start() {
+		GameManager.instance.GodMode = false;
+	}
+	*/
+
 	public void LoadScene(int level) {
 		loadingImage.SetActive (true);
 		if (GodMode) {
