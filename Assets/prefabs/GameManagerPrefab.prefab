@@ -42,8 +42,14 @@ MonoBehaviour:
   isGrounded: 0
   totalScore: 0
   blockSpeed: 0
+  playerController: {fileID: 0}
   player: {fileID: 0}
+  canvas: {fileID: 0}
   currentLevel: 0
+  currentHealth: 0
+  shield: 0
+  nukeCount: 0
+  nukeEffect: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

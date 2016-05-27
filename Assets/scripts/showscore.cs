@@ -19,13 +19,7 @@ public class showscore : MonoBehaviour {
 	}
 
     IEnumerator LoadLevel() {
-        transform.Find("scoreDisplay").gameObject.GetComponent<TextMesh>().text = GameManager.instance.totalScore.ToString();
-        yield return new WaitForSeconds(2);
-		if (GameManager.instance.currentLevel == 6) {
-			SceneManager.LoadScene ("YouWin");
-			GameManager.instance.currentLevel = 1;
-		} else {
-			SceneManager.LoadScene ("level0");
-		}
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene("level0");
     }
 }

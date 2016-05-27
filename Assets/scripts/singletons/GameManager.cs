@@ -19,22 +19,15 @@ public class GameManager : MonoBehaviour {
     public float currentHealth;
     public float shield = 0.0f;
     public int nukeCount;
+    public GameObject nukeEffect;
 
     void Awake () {
-        //Check if instance already exists
         if (instance == null){
-            //if not, set instance to this
             instance = this;
             initGame();
-        }
-        //If instance already exists and it's not this:
-        else if (instance != this)
-        {
-            //Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a GameManager.
+        } else if (instance != this) {
             Destroy(gameObject);
         }
-
-        //Sets this to not be destroyed when reloading scene
         DontDestroyOnLoad(gameObject);
         currentHealth = 100.0f;
         nukeCount = 1;
@@ -206,15 +199,16 @@ public class GameManager : MonoBehaviour {
         return new Vector2[]{new Vector2(-2.88f, 2.88f)};
     }
     public void initGame() {
-        //SceneManager.LoadScene(8);
+        nukeEffect = GameObject.Find("NukeEffect");
+        nukeEffect.SetActive(false);
         isGrounded = false;
         totalScore = 0;
         blockSpeed = 1.5f;
         currentLevel = 0;
         player = GameObject.FindGameObjectWithTag("Player");
-        //initialize all the variables here
     }
     public void initAgain() {
+        nukeEffect = GameObject.Find("NukeEffect");
         player = GameObject.FindGameObjectWithTag("Player");
     }
     public void GameOver() {

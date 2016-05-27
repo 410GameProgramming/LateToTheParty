@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
@@ -46,6 +47,9 @@ public class PlayerController : MonoBehaviour {
         playerShield.CurrentVal = GameManager.instance.shield;
         shieldImage = GameObject.Find("PlayerShield");
         nukeCount = GameManager.instance.nukeCount;
+        if (nukeCount > 1) {
+            nukeCount = 1;
+        }
         weaponImage = GameObject.Find("Weapon").GetComponent<WeaponImage>();
     }
 	
@@ -90,8 +94,7 @@ public class PlayerController : MonoBehaviour {
         }
         if (playerShield.CurrentVal > 0) {
             shieldImage.SetActive(true);
-        }
-        else {
+        } else {
             shieldImage.SetActive(false);
         }
     }
@@ -160,6 +163,9 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void LaunchNuke() {
+        GameManager.instance.nukeEffect.SetActive(true);
+        Color nukeColor = GameManager.instance.nukeEffect.GetComponent<Image>().color;
+        StartCoroutine(FadeIn(nukeColor));
         blocks = GameObject.FindGameObjectsWithTag("Ground");
         enemies = GameObject.FindGameObjectsWithTag("Attack");
         foreach (GameObject block in blocks) {
@@ -169,6 +175,29 @@ public class PlayerController : MonoBehaviour {
             Destroy(enemy);
         }
         --nukeCount;
+    }
+
+    public IEnumerator FadeIn(Color nukeColor) {
+        float elapsedTime = 0.0f;
+        float totalTime = 1.5f;
+        while (elapsedTime < totalTime) {
+            elapsedTime += Time.deltaTime;
+            GameManager.instance.nukeEffect.GetComponent<Image>().color = Color.Lerp(nukeColor, new Color(1, 0, 0, 0.8f), elapsedTime);
+            yield return null;
+        }
+        nukeColor = GameManager.instance.nukeEffect.GetComponent<Image>().color;
+        StartCoroutine(FadeOut(nukeColor));
+    }
+
+    public IEnumerator FadeOut(Color nukeColor) {
+        float elapsedTime = 0.0f;
+        float totalTime = 1.5f;
+        while (elapsedTime < totalTime) {
+            elapsedTime += Time.deltaTime;
+            GameManager.instance.nukeEffect.GetComponent<Image>().color = Color.Lerp(nukeColor, new Color(1, 0, 0, 0), elapsedTime);
+            yield return null;
+        }
+        GameManager.instance.nukeEffect.SetActive(false);
     }
 
     public void DoPickup(string type) {
