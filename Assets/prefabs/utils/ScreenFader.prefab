@@ -39,11 +39,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b880c9f9b221fc2498b790633fcebe84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeTime: 2
+  fadeTime: 3
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
   fadeMaterial: {fileID: 2100000, guid: e642b458f4453e04ab7e2b711c58db98, type: 2}
-  fadetoclear: 0
-  fadetoblack: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
