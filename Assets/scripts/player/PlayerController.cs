@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
@@ -160,6 +161,10 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void LaunchNuke() {
+        GameManager.instance.nukeEffect.SetActive(true);
+        Color nukeColor = GameManager.instance.nukeEffect.GetComponent<Image>().color;
+        float nukeAlpha = GameManager.instance.nukeEffect.GetComponent<Image>().color.a;
+        StartCoroutine(LerpColor(nukeColor, nukeAlpha));
         blocks = GameObject.FindGameObjectsWithTag("Ground");
         enemies = GameObject.FindGameObjectsWithTag("Attack");
         foreach (GameObject block in blocks) {
@@ -169,6 +174,19 @@ public class PlayerController : MonoBehaviour {
             Destroy(enemy);
         }
         --nukeCount;
+    }
+
+    public IEnumerator LerpColor(Color nukeColor, float nukeAlpha) {
+        float ElapsedTime = 0.0f;
+        float TotalTime = 1.5f;
+        while (ElapsedTime < TotalTime) {
+            ElapsedTime += Time.deltaTime;
+            nukeAlpha += Time.deltaTime;
+            GameManager.instance.nukeEffect.GetComponent<Image>().color = Color.Lerp(nukeColor, new Color(1, 0, 0, 0.8f), nukeAlpha);
+            yield return null;
+        }
+        GameManager.instance.nukeEffect.GetComponent<Image>().color = new Color(1, 0, 0, 0);
+        GameManager.instance.nukeEffect.SetActive(false);
     }
 
     public void DoPickup(string type) {
