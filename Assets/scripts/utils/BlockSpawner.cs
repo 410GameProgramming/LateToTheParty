@@ -22,12 +22,16 @@ public class BlockSpawner : MonoBehaviour {
     public GameObject levelEndPlatform;
     public static bool levelEnded;
     public int totalNumOfBlocks = 100;
+
+    private HealthBar levelProgress;
     void Start () {
         timer = delayTimer;
         rb2d = GameManager.instance.player.GetComponent<Rigidbody2D>();
         blockPositions = GameManager.instance.getBlockPositions(level);
         blockCount = 0;
         BlockSpawner.levelEnded = false;
+        levelProgress = GameObject.FindGameObjectWithTag("ProgressBar").GetComponent<HealthBar>();
+        levelProgress.maxValue = totalNumOfBlocks;
 	}
 	
 	// Update is called once per frame
@@ -46,6 +50,7 @@ public class BlockSpawner : MonoBehaviour {
             Vector3 blockPosition = new Vector3(newX, transform.position.y, transform.position.z);
             Instantiate(blocks[patternNumber], blockPosition, transform.rotation);
             blockCount++;
+            levelProgress.Value = totalNumOfBlocks - blockCount;
             timer = delayTimer;
         }
 	}
