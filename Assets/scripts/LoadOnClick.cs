@@ -9,7 +9,9 @@ public class LoadOnClick : MonoBehaviour {
 
 	public GameObject loadingImage;
 	public GameObject otherImage;
+	public GameObject HTPImage;
 	public bool GodMode;
+	public bool HTP;
 
 	public void LoadScene(int level) {
 		loadingImage.SetActive (true);
@@ -35,6 +37,11 @@ public class LoadOnClick : MonoBehaviour {
 
 	public void ActivateGodMode() {
 		GodMode = !GodMode;
+	}
+
+	public void ShowHowToPlay() {
+		HTP = !HTP;
+		HTPImage.SetActive (HTP);
 	}
 }
 //GameManager.instance.variable
