@@ -13,8 +13,8 @@ public class LevelLoader : MonoBehaviour {
     // Update is called once per frame
     IEnumerator loadLevel() {
         yield return new WaitForSeconds(1);
-        GameManager.instance.currentLevel++;
-        SceneManager.LoadScene(GameManager.instance.currentLevel);
+		GameManager.instance.currentLevel++;
+		SceneManager.LoadScene (GameManager.instance.currentLevel);
     }
     void Update() {
         txtLevel.text = "Level " + GameManager.instance.currentLevel;
