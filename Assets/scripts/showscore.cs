@@ -19,7 +19,7 @@ public class showscore : MonoBehaviour {
 	}
 
     IEnumerator LoadLevel() {
-		if (GameManager.instance.currentLevel == 2) {
+		if (GameManager.instance.currentLevel == 6) {
 			SceneManager.LoadScene ("YouWin");
 		} else {
 			SceneManager.LoadScene ("level0");
