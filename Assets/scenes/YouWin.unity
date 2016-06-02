@@ -309,6 +309,7 @@ GameObject:
   - 224: {fileID: 894408962}
   - 222: {fileID: 894408964}
   - 114: {fileID: 894408963}
+  - 114: {fileID: 894408965}
   m_Layer: 5
   m_Name: HighScoreText
   m_TagString: Untagged
@@ -365,15 +366,24 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'High Score:
-
-    High score'
+  m_Text: 
 --- !u!222 &894408964
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 894408961}
+--- !u!114 &894408965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 894408961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71dc00eed096a417c92b8fc747d5bd0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &910238544
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,6 +480,7 @@ GameObject:
   - 224: {fileID: 1310894609}
   - 222: {fileID: 1310894611}
   - 114: {fileID: 1310894610}
+  - 114: {fileID: 1310894612}
   m_Layer: 5
   m_Name: YouWinText
   m_TagString: Untagged
@@ -523,8 +534,8 @@ MonoBehaviour:
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: You Win
 --- !u!222 &1310894611
@@ -533,6 +544,17 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1310894608}
+--- !u!114 &1310894612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1310894608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f470b961f88a7483083b867c8cf9d475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1429710262
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,8 +588,8 @@ RectTransform:
   m_RootOrder: 4
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6, y: -163}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -6, y: -166}
+  m_SizeDelta: {x: 160, y: 36}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1429710264
 MonoBehaviour:
@@ -664,6 +686,8 @@ GameObject:
   - 224: {fileID: 2022907480}
   - 222: {fileID: 2022907482}
   - 114: {fileID: 2022907481}
+  - 114: {fileID: 2022907483}
+  - 114: {fileID: 2022907484}
   m_Layer: 5
   m_Name: ScoreText
   m_TagString: Untagged
@@ -720,15 +744,35 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score:
-
-    score'
+  m_Text: 
 --- !u!222 &2022907482
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2022907479}
+--- !u!114 &2022907483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2022907479}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0565e67130073af41a463ef68bb48334, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2022907484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2022907479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d482b6571b62045b3915631b33fa6d29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2052520191
 GameObject:
   m_ObjectHideFlags: 0
@@ -837,5 +881,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3972e5f9cfcd4a668141c05eab3aacd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: {fileID: 2022907481}
-  highscore: {fileID: 894408963}

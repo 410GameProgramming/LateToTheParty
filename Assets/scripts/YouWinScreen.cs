@@ -4,18 +4,29 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class YouWinScreen : MonoBehaviour {
+	
+	//public Text score;
+	//public Text highscore;
 
-	public Text score;
-	public Text highscore;
-	/*
-	void Start() {
-		score = gameObject.GetComponent<Text>();
-		highscore = gameObject.GetComponent<Text> ();
-		score.text = "Score:\n" + GameManager.instance.totalScore;
-		highscore.text = "High Score:\n" + PlayerPrefs.GetInt ("firstScore");
+	void Awake() {
+		//score = gameObject.GetComponent<Text>();
+		//highscore = gameObject.GetComponent<Text> ();
+//		print (GameManager.instance.totalScore);
+		//score.text = GameManager.instance.totalScore.ToString();
+		GameManager.instance.UpdateHighScore ();
+		//highscore.text = PlayerPrefs.GetInt ("firstScore").ToString();
+		//GameManager.instance.ResetScore ();
 	}
-	*/
+
+	void Start() {
+		GameManager.instance.ResetScore ();
+		GameManager.instance.currentLevel = 1;
+	}
+
 	public void ReturnToTitleScreen() {
 		SceneManager.LoadScene("Title_Screen");
 	}
 }
+
+
+//transform.Find("scoreDisplay").gameObject.GetComponent<TextMesh>().text = GameManager.instance.totalScore.ToString();

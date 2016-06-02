@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour {
     public float shield = 0.0f;
     public int nukeCount;
     public GameObject nukeEffect;
+	public bool gameover;
 
     void Awake () {
         if (instance == null){
@@ -206,13 +207,17 @@ public class GameManager : MonoBehaviour {
         blockSpeed = 1.5f;
         currentLevel = 0;
         player = GameObject.FindGameObjectWithTag("Player");
+		gameover = false;
     }
     public void initAgain() {
         nukeEffect = GameObject.Find("NukeEffect");
         player = GameObject.FindGameObjectWithTag("Player");
     }
     public void GameOver() {
-        SceneManager.LoadScene("game_over");
+		gameover = true;
+        SceneManager.LoadScene("YouWin");
+		//UpdateHighScore ();
+		/*
         if(totalScore > PlayerPrefs.GetInt("firstScore"))
         {
             PlayerPrefs.SetInt("thirdScore", PlayerPrefs.GetInt("secondScore"));
@@ -224,6 +229,25 @@ public class GameManager : MonoBehaviour {
         }else if(totalScore > PlayerPrefs.GetInt("thirdScore"))
         {
             PlayerPrefs.SetInt("thirdScore", totalScore);
-        }
+        }*/
     }
+
+	public void UpdateHighScore() {
+		if(totalScore > PlayerPrefs.GetInt("firstScore"))
+		{
+			PlayerPrefs.SetInt("thirdScore", PlayerPrefs.GetInt("secondScore"));
+			PlayerPrefs.SetInt("secondScore", PlayerPrefs.GetInt("firstScore"));
+			PlayerPrefs.SetInt("firstScore", totalScore);
+		}else if(totalScore > PlayerPrefs.GetInt("secondScore")){
+			PlayerPrefs.SetInt("thirdScore", PlayerPrefs.GetInt("secondScore"));
+			PlayerPrefs.SetInt("secondScore", totalScore);
+		}else if(totalScore > PlayerPrefs.GetInt("thirdScore"))
+		{
+			PlayerPrefs.SetInt("thirdScore", totalScore);
+		}
+	}
+
+	public void ResetScore() {
+		totalScore = 0;
+	}
 }
