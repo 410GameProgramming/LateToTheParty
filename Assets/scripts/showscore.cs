@@ -20,6 +20,7 @@ public class showscore : MonoBehaviour {
 
     IEnumerator LoadLevel() {
 		if (GameManager.instance.currentLevel == 6) {
+			GameManager.instance.totalScore *= 2;
 			SceneManager.LoadScene ("YouWin");
 		} else {
 			SceneManager.LoadScene ("level0");
