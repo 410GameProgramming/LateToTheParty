@@ -48,23 +48,23 @@ public class Gun : MonoBehaviour {
             source.PlayOneShot(shootSound);
             switch (weapon) {
                 case 0:
-                    fireRate = 0.5f;
+                    fireRate = 0.2f;
                     nextFire = Time.time + fireRate;
                     bulletInstance = Instantiate(bullet, transform.position, Quaternion.Euler(new Vector3(0, 0, 0))) as Rigidbody2D;
                     bulletInstance.velocity = new Vector2(0, -speed);
                     break;
                 case 1:
-                    fireRate = 0.15f;
+                    fireRate = 0.3f;
                     nextFire = Time.time + fireRate;
                     StartCoroutine(SpreadTimer());
                     break;
                 case 2:
-                    fireRate = 1.0f;
+                    fireRate = 0.3f;
                     nextFire = Time.time + fireRate;
                     StartCoroutine(TriBulletTimer());
                     break;
                 case 3:
-                    fireRate = 1.0f;
+                    fireRate = 0.25f;
                     nextFire = Time.time + fireRate;
                     StartCoroutine(ShotgunTimer());
                     break;
@@ -107,7 +107,7 @@ public class Gun : MonoBehaviour {
         for (int i = 0; i < 3; ++i) {
             bulletInstance = Instantiate(bullet, transform.position, Quaternion.Euler(new Vector3(0, 0, 0))) as Rigidbody2D;
             bulletInstance.velocity = new Vector2(0, -speed);
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.05f);
         }
     }
 

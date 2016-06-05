@@ -19,13 +19,15 @@ public class showscore : MonoBehaviour {
 	}
 
     IEnumerator LoadLevel() {
-		if (GameManager.instance.currentLevel == 6) {
+        if (playerController.undamaged) {
+            GameManager.instance.totalScore += 100;
+        }
+        yield return new WaitForSeconds(1.5f);
+        if (GameManager.instance.currentLevel == 5) {
 			GameManager.instance.totalScore *= 2;
 			SceneManager.LoadScene ("YouWin");
 		} else {
 			SceneManager.LoadScene ("level0");
 		}
-        yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene("level0");
     }
 }

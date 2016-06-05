@@ -55,23 +55,17 @@ public class BlockSpawner : MonoBehaviour {
         }
 	}
 
-    IEnumerator createPlatform()
-    {
+    IEnumerator createPlatform() {
         yield return new WaitForSeconds(3);
-        if (BlockSpawner.levelEnded == false)
-        {
+        if (BlockSpawner.levelEnded == false) {
             Instantiate(levelEndPlatform, transform.position, transform.rotation);
         }
         BlockSpawner.levelEnded = true;
     }
      
-    void LateUpdate(){
-        if (!BlockSpawner.levelEnded && blockCount > totalNumOfBlocks)
-        {
-            
+    void LateUpdate() {
+        if (!BlockSpawner.levelEnded && blockCount > totalNumOfBlocks) {
             StartCoroutine(createPlatform());
-            //SceneManager.LoadScene(1);
         }
     }
-
 }

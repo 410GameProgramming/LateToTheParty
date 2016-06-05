@@ -8,12 +8,14 @@ public class PlayerController : MonoBehaviour {
     public float speed = 50f;
     public float jumpPower = 200f;
     public bool grounded;
+    public bool undamaged;
     public float maxSpeed = 3;
     public Gun.Weapon weapon;
     public Rigidbody2D rb2d;
     public Stat playerHealth;
     public Stat playerShield;
     public int nukeCount;
+    public int weaponUnlock;
     public Transform groundCheck;
     public AudioClip hurtSound;
     public AudioClip jumpSound;
@@ -27,7 +29,6 @@ public class PlayerController : MonoBehaviour {
     private SpriteRenderer sprite;
     private Animator anim;
     private bool damaged = false;
-    private bool undamaged = true;
     private float maxVelocityY = 20.0f;
     private AudioSource source;
 
@@ -39,6 +40,8 @@ public class PlayerController : MonoBehaviour {
         anim = gameObject.GetComponent<Animator>();
         source = GetComponent<AudioSource>();
         nuke = GameObject.Find("Nuke").GetComponent<Nuke>();
+        weaponUnlock = 0;
+        undamaged = true;
     }
 
     void Start () {
@@ -57,8 +60,17 @@ public class PlayerController : MonoBehaviour {
         CheckIfGameOver();
         anim.SetBool("Grounded", grounded);
         anim.SetFloat("Speed", Mathf.Abs(rb2d.velocity.x));
+        if (GameManager.instance.currentLevel == 2) {
+            weaponUnlock = 1;
+        } else if (GameManager.instance.currentLevel == 3) {
+            weaponUnlock = 2;
+        } else if (GameManager.instance.currentLevel == 4) {
+            weaponUnlock = 3;
+        } else if (GameManager.instance.currentLevel == 5) {
+            weaponUnlock = 4;
+        }
         if (Input.GetButtonDown("Fire2")) {
-            if ((int)weapon < 4) {
+            if ((int)weapon < weaponUnlock) {
                 ++weapon;
                 weaponImage.SetImage((int)weapon);
             } else {
@@ -130,7 +142,7 @@ public class PlayerController : MonoBehaviour {
     }
 
     void OnTriggerEnter2D(Collider2D col) {
-        if (!damaged) {
+        if (!damaged && !GameManager.instance.godMode) {
             if (col.tag == "Attack") {
                 source.PlayOneShot(hurtSound);
                 if (System.Math.Abs(rb2d.velocity.y) > 0.0f) {
@@ -144,6 +156,7 @@ public class PlayerController : MonoBehaviour {
                 }
                 else {
                     playerHealth.CurrentVal -= 10;
+                    undamaged = false;
                 }
                 sprite.color = Color.red;
             } else if (col.tag == "EnemyProjectile") {
@@ -152,11 +165,11 @@ public class PlayerController : MonoBehaviour {
                     playerShield.CurrentVal -= 1;
                 } else {
                     playerHealth.CurrentVal -= 5;
+                    undamaged = false;
                 }
                 sprite.color = Color.red;
             }
             damaged = true;
-            undamaged = false;
             source.PlayOneShot(landSound);
             StartCoroutine(Invulnerability());
         }
@@ -179,10 +192,10 @@ public class PlayerController : MonoBehaviour {
 
     public IEnumerator FadeIn(Color nukeColor) {
         float elapsedTime = 0.0f;
-        float totalTime = 1.5f;
+        float totalTime = 1.0f;
         while (elapsedTime < totalTime) {
             elapsedTime += Time.deltaTime;
-            GameManager.instance.nukeEffect.GetComponent<Image>().color = Color.Lerp(nukeColor, new Color(1, 0, 0, 0.8f), elapsedTime);
+            GameManager.instance.nukeEffect.GetComponent<Image>().color = Color.Lerp(nukeColor, new Color(1, 1, 1, 0.8f), elapsedTime);
             yield return null;
         }
         nukeColor = GameManager.instance.nukeEffect.GetComponent<Image>().color;
@@ -191,10 +204,10 @@ public class PlayerController : MonoBehaviour {
 
     public IEnumerator FadeOut(Color nukeColor) {
         float elapsedTime = 0.0f;
-        float totalTime = 1.5f;
+        float totalTime = 1.0f;
         while (elapsedTime < totalTime) {
             elapsedTime += Time.deltaTime;
-            GameManager.instance.nukeEffect.GetComponent<Image>().color = Color.Lerp(nukeColor, new Color(1, 0, 0, 0), elapsedTime);
+            GameManager.instance.nukeEffect.GetComponent<Image>().color = Color.Lerp(nukeColor, new Color(1, 1, 1, 0), elapsedTime);
             yield return null;
         }
         GameManager.instance.nukeEffect.SetActive(false);

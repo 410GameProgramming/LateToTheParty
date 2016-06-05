@@ -1,9 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using UnityEngine.EventSystems;
-
 
 public class LoadOnClick : MonoBehaviour {
 
@@ -13,32 +9,22 @@ public class LoadOnClick : MonoBehaviour {
 	public bool GodMode;
 	public bool HTP;
 
-	/*
-	void Start() {
-		GameManager.instance.GodMode = false;
-	}
-	*/
-
 	public void LoadScene(int level) {
-		loadingImage.SetActive (true);
+		loadingImage.SetActive(true);
 		if (GodMode) {
-			otherImage.SetActive (true);
+            GameManager.instance.godMode = true;
+            otherImage.SetActive(true);
 		}
-		SceneManager.LoadScene (level);
+		SceneManager.LoadScene(level);
 
 	} 
 
 	public void LoadSceneGod() {
 		otherImage.SetActive (true);
-		/* GameObject player = GameObject.Find("Player");
-		 * PlayerController playerController = player.GetComponent<PlayerController>;
-		 * playerController.god_mode = true;
-		 */
-		//GameManager.instance.god_mode = true;
 	}
 
 	public void QuitGame() {
-		Application.Quit ();
+		Application.Quit();
 	}
 
 	public void ActivateGodMode() {
@@ -50,4 +36,3 @@ public class LoadOnClick : MonoBehaviour {
 		HTPImage.SetActive (HTP);
 	}
 }
-//GameManager.instance.variable

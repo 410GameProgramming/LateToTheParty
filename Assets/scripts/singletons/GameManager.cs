@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour {
     public int nukeCount;
     public GameObject nukeEffect;
 	public bool gameover;
+    public bool godMode;
 
     void Awake () {
         if (instance == null){
@@ -200,6 +201,7 @@ public class GameManager : MonoBehaviour {
         return new Vector2[]{new Vector2(-2.88f, 2.88f)};
     }
     public void initGame() {
+        SceneManager.LoadScene("Title_Screen");
         nukeEffect = GameObject.Find("NukeEffect");
         nukeEffect.SetActive(false);
         isGrounded = false;
