@@ -159,7 +159,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 219070992}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -437,7 +437,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!114 &372518183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -544,6 +544,7 @@ MonoBehaviour:
   speed: 100
   jumpPower: 300
   grounded: 0
+  undamaged: 0
   maxSpeed: 3
   weapon: 0
   rb2d: {fileID: 598156128}
@@ -556,6 +557,7 @@ MonoBehaviour:
     maxVal: 4
     currentVal: 0
   nukeCount: 0
+  weaponUnlock: 0
   groundCheck: {fileID: 2111408795}
   hurtSound: {fileID: 8300000, guid: b031dcfae96a21f44b843171afe76f94, type: 3}
   jumpSound: {fileID: 8300000, guid: 887916a4f0d81c842b603188c1b278aa, type: 3}
@@ -657,7 +659,7 @@ Transform:
   - {fileID: 2111408795}
   - {fileID: 63488666}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!82 &598156133
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1046,7 +1048,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &1565079996
 GameObject:
   m_ObjectHideFlags: 0
@@ -1206,7 +1208,7 @@ Transform:
   m_LocalScale: {x: 1.000199, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 10
 --- !u!1 &1765913050
 GameObject:
   m_ObjectHideFlags: 0
@@ -1383,7 +1385,7 @@ Transform:
   m_LocalScale: {x: 1.0001994, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &1896334262
 GameObject:
   m_ObjectHideFlags: 0
@@ -1412,7 +1414,7 @@ Transform:
   - {fileID: 978872741}
   - {fileID: 1908187580}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1 &1908187577
 GameObject:
   m_ObjectHideFlags: 0
@@ -1792,7 +1794,7 @@ Transform:
   m_LocalScale: {x: 1.000199, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!114 &2147147409
 MonoBehaviour:
   m_ObjectHideFlags: 0
