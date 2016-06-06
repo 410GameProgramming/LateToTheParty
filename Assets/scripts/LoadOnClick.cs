@@ -13,15 +13,17 @@ public class LoadOnClick : MonoBehaviour {
 		loadingImage.SetActive(true);
 		if (GodMode) {
             GameManager.instance.godMode = true;
-            otherImage.SetActive(true);
+            //otherImage.SetActive(true);
 		}
 		SceneManager.LoadScene(level);
 
 	} 
 
+	/*
 	public void LoadSceneGod() {
 		otherImage.SetActive (true);
 	}
+	*/
 
 	public void QuitGame() {
 		Application.Quit();

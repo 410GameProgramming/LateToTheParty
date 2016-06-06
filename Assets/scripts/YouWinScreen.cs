@@ -13,7 +13,9 @@ public class YouWinScreen : MonoBehaviour {
 		//highscore = gameObject.GetComponent<Text> ();
 //		print (GameManager.instance.totalScore);
 		//score.text = GameManager.instance.totalScore.ToString();
-		GameManager.instance.UpdateHighScore ();
+		if (!GameManager.instance.godMode) {
+			GameManager.instance.UpdateHighScore ();
+		}
 		//highscore.text = PlayerPrefs.GetInt ("firstScore").ToString();
 		//GameManager.instance.ResetScore ();
 	}
@@ -21,6 +23,7 @@ public class YouWinScreen : MonoBehaviour {
 	void Start() {
 		GameManager.instance.ResetScore ();
 		GameManager.instance.currentLevel = 1;
+		GameManager.instance.currentHealth = 100.0f;
 	}
 
 	public void ReturnToTitleScreen() {
