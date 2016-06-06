@@ -27,6 +27,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 480356}
   - 114: {fileID: 11453922}
+  - 61: {fileID: 6153134}
   m_Layer: 8
   m_Name: pattern1_spikes_Level1
   m_TagString: Ground
@@ -260,11 +261,25 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 5f78bec3e17763a49ba4b2879a189a5a, type: 2}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0.03045845, y: -0.1192525}
   serializedVersion: 2
   m_Size: {x: 2.1171403, y: 0.3}
+--- !u!61 &6153134
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 130036}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.026030898, y: -0.0065073967}
+  serializedVersion: 2
+  m_Size: {x: 2.1193311, y: 0.51842785}
 --- !u!114 &11423468
 MonoBehaviour:
   m_ObjectHideFlags: 1
