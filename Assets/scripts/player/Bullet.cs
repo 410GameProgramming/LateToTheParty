@@ -2,7 +2,6 @@
 
 public class Bullet : MonoBehaviour {
 
-    public ParticleSystem groundContact;
 
 
     void Start () {
@@ -18,7 +17,6 @@ public class Bullet : MonoBehaviour {
             Destroy (gameObject);
 		}
         if (col.tag == "solid block") {
-            Instantiate(groundContact, transform.position, transform.rotation);
             Destroy(gameObject);
         } else if (col.tag == "Wall") {
          
