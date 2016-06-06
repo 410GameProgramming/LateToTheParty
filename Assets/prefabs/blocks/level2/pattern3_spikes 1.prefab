@@ -92,7 +92,7 @@ GameObject:
   - 61: {fileID: 6195680}
   m_Layer: 8
   m_Name: collider
-  m_TagString: Attack
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
