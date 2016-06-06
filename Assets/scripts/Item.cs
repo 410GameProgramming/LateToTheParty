@@ -28,23 +28,23 @@ public class Item : MonoBehaviour {
             type = "health";
             
             GetComponent<SpriteRenderer>().sprite = healthSprite;
-            transform.Find("price").gameObject.GetComponent<TextMesh>().text = "50";
-            price = 50;
+            transform.Find("price").gameObject.GetComponent<TextMesh>().text = "75";
+            price = 75;
 
         }
         else if(rng == 2)
         {
             type = "nuke";
             GetComponent<SpriteRenderer>().sprite = nukeSprite;
-            transform.Find("price").gameObject.GetComponent<TextMesh>().text = "150";
-            price = 150;
+            transform.Find("price").gameObject.GetComponent<TextMesh>().text = "100";
+            price = 100;
         }
         else if(rng == 3)
         {
             type = "shield";
             GetComponent<SpriteRenderer>().sprite = shieldSprite;
-            transform.Find("price").gameObject.GetComponent<TextMesh>().text = "100";
-            price = 100;
+            transform.Find("price").gameObject.GetComponent<TextMesh>().text = "50";
+            price = 50;
         }
         
     }
