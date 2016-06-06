@@ -22,7 +22,7 @@ public class YouWinScreen : MonoBehaviour {
 
 	void Start() {
 		GameManager.instance.ResetScore ();
-		GameManager.instance.currentLevel = 1;
+		GameManager.instance.currentLevel = 0;
 		GameManager.instance.currentHealth = 100.0f;
 	}
 
