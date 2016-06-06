@@ -3624,6 +3624,7 @@ MonoBehaviour:
   speed: 100
   jumpPower: 400
   grounded: 0
+  undamaged: 0
   maxSpeed: 3
   weapon: 0
   rb2d: {fileID: 1129290318}
@@ -3636,6 +3637,7 @@ MonoBehaviour:
     maxVal: 4
     currentVal: 0
   nukeCount: 0
+  weaponUnlock: 0
   groundCheck: {fileID: 285043017}
   hurtSound: {fileID: 8300000, guid: b031dcfae96a21f44b843171afe76f94, type: 3}
   jumpSound: {fileID: 8300000, guid: 887916a4f0d81c842b603188c1b278aa, type: 3}
@@ -4481,6 +4483,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22403074, guid: 3b440c230efc7f54eba52dc52b8b3475, type: 2}
       propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 157440, guid: 3b440c230efc7f54eba52dc52b8b3475, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
