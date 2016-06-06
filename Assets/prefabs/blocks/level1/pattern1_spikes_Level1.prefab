@@ -18,22 +18,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &111802
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 424762}
-  - 61: {fileID: 6198826}
-  m_Layer: 8
-  m_Name: collider
-  m_TagString: Ground
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &130036
 GameObject:
   m_ObjectHideFlags: 0
@@ -158,7 +142,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 480356}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!4 &418292
 Transform:
   m_ObjectHideFlags: 1
@@ -171,18 +155,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 480356}
   m_RootOrder: 4
---- !u!4 &424762
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 111802}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 480356}
-  m_RootOrder: 5
 --- !u!4 &435682
 Transform:
   m_ObjectHideFlags: 1
@@ -194,7 +166,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 480356}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!4 &447512
 Transform:
   m_ObjectHideFlags: 1
@@ -234,7 +206,6 @@ Transform:
   - {fileID: 497442}
   - {fileID: 447512}
   - {fileID: 418292}
-  - {fileID: 424762}
   - {fileID: 435682}
   - {fileID: 407396}
   m_Father: {fileID: 0}
@@ -291,23 +262,9 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: 5f78bec3e17763a49ba4b2879a189a5a, type: 2}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0.01650083, y: -0.1192525}
+  m_Offset: {x: 0.03045845, y: -0.1192525}
   serializedVersion: 2
-  m_Size: {x: 3.15, y: 0.3}
---- !u!61 &6198826
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 111802}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 5f78bec3e17763a49ba4b2879a189a5a, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0.023380756, y: 0}
-  serializedVersion: 2
-  m_Size: {x: 2.1129231, y: 0.52303267}
+  m_Size: {x: 2.1171403, y: 0.3}
 --- !u!114 &11423468
 MonoBehaviour:
   m_ObjectHideFlags: 1
