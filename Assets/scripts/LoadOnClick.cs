@@ -6,8 +6,10 @@ public class LoadOnClick : MonoBehaviour {
 	public GameObject loadingImage;
 	public GameObject otherImage;
 	public GameObject HTPImage;
+    public GameObject creditsImage;
 	public bool GodMode;
 	public bool HTP;
+    public bool credits;
 
 	public void LoadScene(int level) {
 		loadingImage.SetActive(true);
@@ -32,6 +34,11 @@ public class LoadOnClick : MonoBehaviour {
 	public void ActivateGodMode() {
 		GodMode = !GodMode;
 	}
+
+    public void ShowCredits() {
+        credits = !credits;
+        creditsImage.SetActive(credits);
+    }
 
 	public void ShowHowToPlay() {
 		HTP = !HTP;
